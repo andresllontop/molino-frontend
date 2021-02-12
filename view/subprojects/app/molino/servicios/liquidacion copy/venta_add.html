@@ -1,0 +1,573 @@
+<div id="addVentaHtml" class="form-row">
+
+  <div class="col-xl-12 order-1">
+
+    <!-- Module Content -->
+    <div class="card">
+      <!-- Module Content Inner -->
+      <div class="dt-module__content-inner p-2">
+        <a href="javascript:void(0)" class="d-inline-block cerrar-venta py-2">
+          <i class="icon icon-arrow-long-left icon-2x mr-3"></i> <span class="align-middle">Ir a Lista </span>
+        </a>
+        <div class="form-row">
+          <div class="col-sm-6">
+            <div class="col-12 form-group">
+              <label for="txtFechaIFilterEntrada" class="w-25 text-right">Desde</label>
+
+              <div class="input-group input-group-sm">
+                <div class="input-group-prepend btn btn-outline-primary mr-1" data-target="#txtFechaIFilterEntrada"
+                  data-toggle="datetimepicker">
+                  <i class="icon icon-calendar"></i>
+
+                </div>
+                <input type="text" id="txtFechaIFilterEntrada" class="form-control form-control-sm"
+                  placeholder="DD/MM/AAAA">
+                <div class="input-group-append">
+
+                  <button class="btn btn-dark btn-sm input-ii" type="button" id="btnEliminarFechaIFilterEntrada"
+                    data-toggle="tooltip" title="" data-original-title="Eliminar Fecha">
+                    <i class="icon icon-trash"></i></button>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 form-group">
+              <label for="txtFechaFFilterEntrada" class="w-25 text-right">Hasta</label>
+              <div class="input-group input-group-sm">
+                <div class="input-group-prepend btn btn-outline-primary mr-1" data-target="#txtFechaFFilterEntrada"
+                  data-toggle="datetimepicker">
+                  <i class="icon icon-calendar"></i>
+
+                </div>
+                <input type="text" id="txtFechaFFilterEntrada" class="form-control form-control-sm"
+                  placeholder="DD/MM/AAAA">
+                <div class="input-group-append">
+
+                  <button class="btn btn-dark btn-sm input-ii" type="button" id="btnEliminarFechaFFilterEntrada"
+                    data-toggle="tooltip" title="" data-original-title="Eliminar Fecha">
+                    <i class="icon icon-trash"></i></button>
+                </div>
+              </div>
+            </div>
+            <!-- Cliente-->
+            <div class="col-12 form-group">
+              <label for="txtClienteUbicacionProducto" class="">Cliente</label>
+              <div class="input-group">
+                <input id="txtClienteUbicacionProducto" type="text" class="form-control form-control-sm"
+                  placeholder="Seleccionar Cliente -->" disabled>
+                <div class="input-group-append">
+                  <button id="btnSeleccionarCliente" class="btn btn-sm btn-outline-primary" type="button"><i
+                      class="icon icon-open-new-tab icon-sm">
+                    </i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <!-- PRODUCTO -->
+            <div class="col-12 form-group">
+              <!-- Dropdown Link -->
+              <form id="FrmEntradaModal" class="search-box right-side-icon mw-100">
+                <label for="txtFilterProductoC" class="">Productos Ingresados</label>
+                <input type="search" id="txtFilterProductoC" class="form-control form-control-sm">
+                <button type="submit" class="search-icon pt-5">
+                  <i class="icon icon-search icon-lg "></i>
+                </button>
+
+              </form>
+              <!-- /dropdown link -->
+              <!-- /dropdown -->
+              <div class="dt-module__content ps-custom-scrollbar">
+                <!-- Contacts -->
+                <div class="dt-contacts contacts-list m-0" id="tbodyProductoC">
+                  <!-- Lista -->
+                  <!-- /Lista -->
+                </div>
+                <!-- contacts -->
+
+              </div>
+
+            </div>
+            <!-- Dropdown -->
+          </div>
+
+
+
+        </div>
+
+
+      </div>
+      <!-- /module content inner -->
+
+    </div>
+    <!-- /module content -->
+
+  </div>
+
+  <!-- COMPRA LISTA-->
+  <div class="col-xl-12 order-2">
+
+    <!-- Module Container -->
+    <div class="mw-100 card m-0">
+      <!-- Module Header -->
+      <div class="dt-module__header ">
+        <!-- Card Heading -->
+        <h3 class="dt-page__title mx-auto " id="TituloModalVenta">Liquidación de Productos</h3>
+        <!-- /card heading -->
+      </div>
+      <!-- /module header -->
+
+      <!-- Module Content -->
+      <div class="dt-module__content ps-custom-scrollbar ">
+        <!-- Module Content Inner -->
+        <div class="dt-module__content-inner p-2">
+          <!-- Grid Item -->
+          <div class="col-12 card m-0 bg-primary p-1 mb-3" style="min-width: 935px;">
+            <div class="card mb-0">
+              <!-- Widget Item -->
+              <div class="dt-widget__item border-bottom pr-4">
+                <!-- Widget Info -->
+                <div class="dt-widget__info text-truncate ">
+                  <div class="text-left">
+                    <a class="dt-card__title f-14" href="javascript:void(0)">PRODUCTO</a>
+
+                  </div>
+                </div>
+                <!-- /widget info -->
+                <!-- Widget Info -->
+                <div class="dt-widget__info text-truncate   pl-2 pr-2">
+                  <div class="text-left ">
+                    <a class="dt-card__title f-14" href="javascript:void(0)">ALMACÉN ORIGEN</a>
+
+                  </div>
+                </div>
+                <!-- /widget info -->
+                <!-- Widget Info -->
+                <div class="dt-widget__info pl-2 pr-2" style="min-width: 145px;
+               ">
+                  <div class="text-center">
+                    <a class="dt-card__title f-14" href="javascript:void(0)">IGV (%)</a>
+                  </div>
+                </div>
+                <!-- /widget info -->
+                <!-- Widget Info -->
+                <div class="dt-widget__info pl-2 pr-2  " style="min-width: 180px;">
+                  <div class="text-center ">
+                    <a class="dt-card__title f-14" href="javascript:void(0)">PRECIO VENTA UNITARIO</a>
+                  </div>
+                </div>
+                <!-- /widget info -->
+                <!-- Widget Info -->
+                <div class="dt-widget__info pl-2 pr-2" style="min-width: 180px;">
+                  <div class="text-center">
+                    <a class="dt-card__title f-14" href="javascript:void(0)">CANTIDAD</a>
+                  </div>
+                </div>
+                <!-- /widget info -->
+                <!-- Widget Info -->
+                <div class="dt-widget__info  pl-2 pr-2 " style="min-width: 100px;">
+                  <div class=" text-right ">
+                    <a class="dt-card__title f-14" href="javascript:void(0)">SUBTOTAL</a>
+                  </div>
+                </div>
+                <!-- /widget info -->
+                <!-- Widget Info -->
+                <div class="dt-widget__info pl-2 pr-2" style=" min-width: 100px;">
+
+                  <div class=" text-right">
+                    <a class="dt-card__title f-14" href="javascript:void(0)">TOTAL</a>
+                  </div>
+                </div>
+                <!-- /widget info -->
+              </div>
+              <!-- /widgets item -->
+
+              <!-- Widget Item -->
+              <div id="tbodyVentaDetalle" class="dt-widget dt-widget-hover-bg text-light-gray">
+                <!-- Widget Item -->
+                <div class="dt-widget__item border-bottom pr-4">
+                  <!-- Widget Info -->
+                  <div class="dt-widget__info text-truncate ">
+                    <div class="dt-card__title text-left">
+                      <cite class="f-12" title="lISTA VACÍA">No hay Productos</cite>
+                    </div>
+                  </div>
+                  <!-- /widget info -->
+
+                </div>
+                <!-- /widgets item -->
+
+
+
+              </div>
+              <!-- Widget Item -->
+              <!-- Widget Item -->
+              <div class="dt-widget__item  pr-4 py-2 d-none">
+
+                <!-- Widget Info -->
+                <div class="dt-widget__info ">
+                  <div class=" text-right">
+                    <p class="m-0">Descuento Global : </P>
+                  </div>
+                </div>
+                <!-- /widget info -->
+                <!-- Widget Info -->
+                <div class="dt-widget__info border-bottom" style=" max-width: 125px;">
+                  <div class="text-right">
+                    <p id="txtTotalDescuento" class="dt-card__title f-14">0</p>
+                  </div>
+                </div>
+                <!-- /widget info -->
+
+              </div>
+              <!-- /widgets item -->
+              <!-- Widget Item -->
+              <div class="dt-widget__item pr-4 py-2">
+
+                <!-- Widget Info -->
+                <div class="dt-widget__info ">
+                  <div class=" text-right">
+                    <p class="m-0">OP. GRAVADA : </P>
+                  </div>
+                </div>
+                <!-- /widget info -->
+                <!-- Widget Info -->
+                <div class="dt-widget__info border-bottom" style=" max-width: 125px;">
+                  <div class="text-right">
+                    <p id="txtTotalGravada" class="dt-card__title f-14">0</p>
+                  </div>
+                </div>
+                <!-- /widget info -->
+
+
+              </div>
+              <!-- /widgets item -->
+              <!-- Widget Item -->
+              <div class="dt-widget__item pr-4 py-2">
+
+                <!-- Widget Info -->
+                <div class="dt-widget__info ">
+                  <div class=" text-right">
+
+                    <p class="m-0">IGV : </P>
+                  </div>
+                </div>
+                <!-- /widget info -->
+                <!-- Widget Info -->
+                <div class="dt-widget__info border-bottom" style=" max-width: 125px;">
+                  <div class="text-right">
+                    <p id="txtIgvTotal" class="dt-card__title f-14">0</p>
+                  </div>
+                </div>
+                <!-- /widget info -->
+
+
+              </div>
+              <!-- /widgets item -->
+              <!-- Widget Item -->
+              <div class="dt-widget__item pr-4 py-2 ">
+
+                <!-- Widget Info -->
+                <div class="dt-widget__info ">
+                  <div class="text-right">
+                    <p class="m-0">Flete: </P>
+                  </div>
+                </div>
+                <!-- /widget info -->
+                <!-- Widget Info -->
+                <div class="dt-widget__info " style=" max-width: 125px;">
+                  <div class="input-group input-group-sm">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">S/.</span>
+                    </div>
+                    <input type="number" class="form-control form-control-sm text-right" id="txtCargoVenta"
+                      placeholder="0" value="0">
+                  </div>
+
+
+                </div>
+                <!-- /widget info -->
+
+
+              </div>
+              <!-- /widgets item -->
+              <!-- Widget Item -->
+              <div class="dt-widget__item pr-4 py-2 ">
+
+                <!-- Widget Info -->
+                <div class="dt-widget__info ">
+                  <div class="text-right">
+                    <p class="m-0">Prestamos : </P>
+                  </div>
+                </div>
+                <!-- /widget info -->
+                <!-- Widget Info -->
+                <div class="dt-widget__info " style=" max-width: 125px;">
+                  <div class="input-group input-group-sm">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">S/.</span>
+                    </div>
+                    <input type="number" class="form-control form-control-sm text-right" id="txtCargoVenta"
+                      placeholder="0" value="0">
+                  </div>
+
+
+                </div>
+                <!-- /widget info -->
+
+
+              </div>
+              <!-- /widgets item -->
+              <!-- Widget Item -->
+              <div class="dt-widget__item pr-4 py-2 ">
+
+                <!-- Widget Info -->
+                <div class="dt-widget__info ">
+                  <div class="text-right">
+                    <p class="m-0">Otros Cargos : </P>
+                  </div>
+                </div>
+                <!-- /widget info -->
+                <!-- Widget Info -->
+                <div class="dt-widget__info " style=" max-width: 125px;">
+                  <div class="input-group input-group-sm">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">S/.</span>
+                    </div>
+                    <input type="number" class="form-control form-control-sm text-right" id="txtCargoVenta"
+                      placeholder="0" value="0">
+                  </div>
+
+
+                </div>
+                <!-- /widget info -->
+
+
+              </div>
+              <!-- /widgets item -->
+              <!-- Widget Item -->
+              <div class="dt-widget__item pr-4 py-2">
+
+                <!-- Widget Info -->
+                <div class="dt-widget__info ">
+                  <div class=" text-right">
+                    <a class="dt-card__title" href="javascript:void(0)">Importe Total : </a>
+                  </div>
+                </div>
+                <!-- /widget info -->
+
+                <!-- Widget Info -->
+                <div class="dt-widget__info " style=" max-width: 125px;">
+                  <div class="text-right">
+                    <p id="txtImporteTotal" class="dt-card__title f-16">0</p>
+                  </div>
+                </div>
+                <!-- /widget info -->
+              </div>
+              <!-- /widgets item -->
+
+
+            </div>
+          </div>
+          <!-- /grid item -->
+        </div>
+        <!-- /module content inner -->
+
+      </div>
+      <!-- /module content -->
+      <div class="add-comment-box">
+
+        <!-- Action Tools -->
+        <div class="action-tools">
+          <form id="FrmVentaModal">
+            <button type="submit" class="btn btn-primary dt-fab-btn" data-toggle="tooltip" data-placement="left"
+              data-original-title="Registrar"><i class="icon icon-send-new icon-xl pulse-light"></i>
+              </i>
+
+            </button>
+
+          </form>
+
+          <div id="btnCancelAddDetalleVentaHtml" class="dt-fab-btn dt-attachment-btn size-30 molino-cursor-mano"
+            data-toggle="tooltip" data-placement="bottom" data-original-title="Limpiar">
+            <i data-icon="9" class="text-danger icon pulse-ligh"></i>
+          </div>
+        </div>
+        <!-- /action tools -->
+
+        <!-- Media -->
+        <div class="media">
+          <!-- Media Body -->
+          <div class="media-body">
+
+            <!-- Text Area -->
+            <textarea id="txtObservacionVenta" class="form-control border-0 shadow-none bg-focus" rows="1"
+              placeholder="Escribe Observación..."></textarea>
+            <!-- /text area -->
+
+          </div>
+          <!-- /media body -->
+        </div>
+        <!-- /media -->
+
+      </div>
+
+
+    </div>
+  </div>
+  <!-- Module Container -->
+  <div class="col-sm-12 order-3">
+    <!-- Module Content -->
+    <div class="ps-custom-scrollbar card">
+      <!-- Module Content Inner -->
+      <div class="dt-module__content-inner">
+        <div class="form-row">
+          <div class="col-sm-6 border-xl-right border-sm-0">
+            <div class="custom-control custom-checkbox  form-group pt-2">
+              <input type="checkbox" id="checkComprobanteVenta" class="custom-control-input">
+              <label class="custom-control-label text-info" for="checkComprobanteVenta">¿Agregar Comprobante?</label>
+            </div>
+
+            <div class="col-xl-12 form-group d-none">
+              <div class="form-row">
+                <label class="col-form-label text-sm-left pt-0" for="selectTipoComprobante">Tipo Comprobante</label>
+                <div class="input-group">
+                  <select class="form-control form-control-sm" id="selectTipoComprobante">
+                    <option value="0">Seleccione...</option>
+                    <option value="1">Boleta</option>
+                    <option value="2">Factura</option>
+                    <option value="3">Ticket</option>
+                    <option value="4">Orden Salida</option>
+                    <option value="5">Orden Entrada</option>
+                    <option value="6">OTRO</option>
+                  </select>
+                  <div class="input-group-append">
+                    <select class="form-control form-control-sm d-none" id="tbodyDocumentoC">
+
+                    </select>
+                  </div>
+                </div>
+
+
+              </div>
+
+              <div class="form-row d-none">
+                <label class="col-form-label text-sm-right" for="txtNumeroDocumento">Número de Documento</label>
+
+                <input type="text" class="form-control form-control-sm" id="txtNumeroDocumento"
+                  placeholder="SERIE-NUMERO / NUMERO">
+
+              </div>
+
+            </div>
+            <div class="dt-entry__header mb-5">
+              <!-- Entry Heading -->
+              <div class="dt-entry__heading">
+                <h3 class="dt-page__title mb-0">Total a Pagar <span class="f-12 text-light-gray"></span>
+                </h3>
+              </div>
+              <!-- /entry heading -->
+            </div>
+            <!-- Grid -->
+            <div class="row no-gutters">
+              <!-- Grid Item -->
+              <div class="col-sm-12">
+                <div class="input-group input-group-sm">
+                  <div class="input-group-prepend">
+                    <span class="align-self-center mr-2">S/. </span>
+                  </div>
+                  <p id="txtTotalPagado" class="display-3 font-weight-500 text-dark mr-2">0</p>
+                </div>
+              </div>
+              <!-- /grid item -->
+              <!-- Grid Item -->
+              <div class="col-sm-8 col-9">
+                <!-- Input Group -->
+                <div class="input-group input-group-sm">
+
+                  <div class="input-group-prepend">
+                    <select class="form-control form-control-sm" id="txtMetodoPago">
+                      <option value="1">Pago Efectivo</option>
+                      <option value="2">VISA</option>
+                    </select>
+                    <span class="input-group-text">S/.</span>
+                  </div>
+                  <input id="txtMontoPagado" type="number" class="form-control form-control-sm">
+                </div>
+                <!-- /input group -->
+
+              </div>
+              <!-- /grid item -->
+              <div class="col-sm-4 col-3">
+                <button id="btnCambiarPagoVenta" class="btn btn-success btn-sm w-100" type="button">Pagado</button>
+              </div>
+
+            </div>
+            <!-- /grid -->
+            <hr class="my-5  w-100">
+            <div class="dt-card__header p-0 w-100">
+              <!-- Card Heading -->
+              <div class="dt-card__heading">
+                <h3 class="dt-card__title">
+                  <span class="align-bottom">Deuda</span>
+                </h3>
+              </div>
+              <!-- /card heading -->
+
+              <!-- Card Tools -->
+              <div class="dt-card__tools">
+                <!-- Input Group -->
+                <div class="input-group input-group-sm">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">S/.</span>
+                  </div>
+                  <input id="txtTotalDeuda" type="text" class="form-control form-control-sm" placeholder="0">
+                </div>
+                <!-- /input group -->
+              </div>
+              <!-- /card tools -->
+
+            </div>
+            <!-- /card header -->
+          </div>
+          <div class="col-sm-6">
+            <!-- PRODUCTO -->
+            <div class="col-12 form-group">
+              <!-- Dropdown Link -->
+              <form id="FrmVentaCModal" class="search-box right-side-icon mw-100">
+                <label for="txtFilterVentaC" class="">Productos Vendidos</label>
+                <input type="search" id="txtFilterVentaC" class="form-control form-control-sm">
+                <button type="submit" class="search-icon pt-5">
+                  <i class="icon icon-search icon-lg "></i>
+                </button>
+
+              </form>
+              <!-- /dropdown link -->
+              <!-- /dropdown -->
+              <div class="dt-module__content ps-custom-scrollbar">
+                <!-- Contacts -->
+                <div class="dt-contacts contacts-list m-0" id="tbodyVentaC">
+                  <!-- Lista -->
+                  <!-- /Lista -->
+                </div>
+                <!-- contacts -->
+
+              </div>
+
+            </div>
+            <!-- Dropdown -->
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- /module content inner -->
+
+    </div>
+    <!-- /module content -->
+  </div>
+  <!-- /module container -->
+
+</div>

@@ -1,0 +1,98 @@
+<!-- Card LISTADO DE ÁREA-->
+
+<div id="listaAreaHtml" class="col-xl-12 d-none">
+
+    <!-- Module -->
+    <div class="dt-module">
+        <!-- Module Sidebar -->
+        <div class="dt-module__sidebar" style="min-width: 31%;">
+
+            <!-- Sidebar Header -->
+            <div class="dt-module__sidebar-header py-1 d-md-none ">
+
+                <!-- App Quick Menu -->
+                <div class="quick-menu-list justify-content-end">
+
+                    <a id="btnAbrirArea" href="javascript:void(0)" class="quick-menu d-md-none py-2 "
+                        data-toggle="msidebar-content"><i class="icon icon-circle-add-o icon-1x"></i></a>
+                    <a id="btnAbrirNewArea" href="javascript:void(0)" class="quick-menu d-lg-none d-none py-2 "><i
+                            class="icon icon-circle-add-o icon-1x"></i></a>
+                </div>
+                <!-- /app quick menu -->
+
+            </div>
+            <!-- /sidebar header -->
+
+            <!-- Sidebar Menu -->
+            <div class="dt-module__sidebar-content w-100 ps-custom-scrollbar pt-sm-0" id="accionAbrirArea">
+                <div id="drawer-agregarArea">
+                </div>
+            </div>
+            <!-- /sidebar Menu -->
+
+        </div>
+        <!-- /module sidebar -->
+        <!-- Module Container -->
+        <div class="dt-module__container card p-1 m-0">
+
+            <!-- Module Header -->
+            <div class="dt-module__header card-header pb-1  px-lg-4 px-3 ">
+                <div class="dropdown">
+                    <input type="hidden" id="pageArea" value="1">
+                    <select id="sizePageArea" class="form-control form-control-sm select2-single">
+                        <option value="10">10</option>
+                        <option value="15">15</option>
+                        <option value="20">20</option>
+                    </select>
+                </div>
+
+                <!-- Title -->
+                <div class="mx-auto text-center text-truncate">
+                    <h3 class="dt-module__title text-truncate" id="titleManagerArea">ÁREAES</h3>
+
+                </div>
+                <!-- Title -->
+                <!-- Search Box -->
+                <form id="FrmArea" class="dt-module__filter search-box ml-2 max-w-250 right-side-icon">
+                    <input id="txtFilterArea" class="form-control form-control-sm " placeholder="Search in app..."
+                        data-toggle="tooltip" data-placement="left" data-original-title="Buscar" type="search" />
+                    <button type="submit" class="search-icon">
+                        <i class="icon icon-search icon-lg"></i></button>
+                </form>
+                <!-- /search box -->
+
+            </div>
+            <!-- /module header -->
+
+            <!-- Module Content -->
+            <div class="dt-module__content ps-custom-scrollbar">
+
+                <!-- Module Content Inner -->
+                <div class="dt-module__content-inner p-0">
+
+                    <!-- List -->
+                    <div id="tbodyArea" class="dt-widget dt-widget-hover-bg text-light-gray">
+                    </div>
+                    <!-- /list -->
+
+                    <!-- pagination ÁREA -->
+                    <nav class="pt-2 border-top" aria-label="Page navigation example">
+                        <ul id="paginationArea" class="pagination pagination-sm justify-content-center">
+                        </ul>
+                    </nav>
+                    <!-- /pagination ÁREA -->
+                </div>
+                <!-- /module content inner -->
+
+            </div>
+            <!-- /module content -->
+
+        </div>
+        <!-- /module container -->
+
+
+
+    </div>
+    <!-- /module -->
+
+</div>

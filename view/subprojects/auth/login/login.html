@@ -1,0 +1,122 @@
+<!-- Root -->
+<div class="dt-root">
+	<div class="dt-root__inner">
+		<!-- Login Container -->
+		<div class="dt-login--container">
+			<!-- Login Content -->
+			<div class="dt-login__content-wrapper" style="max-width: 450px;">
+				<!-- Login Background Section -->
+				<div class=" w-100 text-center">
+					<!-- Brand logo https://via.placeholder.com/334x119 -->
+					<div class="dt-login__logo">
+						<a class="dt-brand__logo-link" href="./login">
+							<img class="dt-brand__logo-img" style="width: 100px; height: 100px"
+								src="../assets/images/logo/13.png" alt=" logo-Molino" />
+						</a>
+					</div>
+					<!-- /brand logo -->
+					<div class="dt-login__bg-content">
+						<!-- Login Title -->
+						<h1 class="dt-login__title text-primary" style="font-size: 2.5rem">
+							Inicio de Sesión
+						</h1>
+						<!-- /login title -->
+
+
+					</div>
+
+
+				</div>
+				<!-- /login background section -->
+				<!-- Login Content Section -->
+				<div class="dt-login__content w-100">
+					<!-- Login Content Inner -->
+					<div class="dt-login__content-inner" style="padding-bottom: 10px">
+						<!-- Form -->
+						<form id="FrmLogin">
+
+							<!-- Form Group -->
+							<div class="form-group">
+								<label class="sr-only" for="txtUsername">Username</label>
+								<div class="input-group">
+									<div class="input-group-prepend">
+										<span class="btn btn-sm btn-primary">
+											<i class="icon icon-user icon-fw icon-sm"></i>
+										</span>
+									</div>
+									<input id="txtUsername" type="text" class="form-control " aria-describedby="email-1"
+										name="login" placeholder="Username">
+								</div>
+							</div>
+							<!-- /form group -->
+
+							<!-- Form Group -->
+							<div class="form-group">
+								<label class="sr-only" for="txtPass">Password</label>
+
+								<div class="input-group">
+									<div class="input-group-prepend">
+										<span class="btn btn-sm btn-primary">
+											<i class="icon icon-forgot-pass icon-fw icon-sm"></i>
+										</span>
+									</div>
+									<input type="password" class="form-control " id="txtPass" name="password"
+										placeholder="Password">
+								</div>
+							</div>
+							<!-- /form group -->
+							<!-- Form Group -->
+							<div class="dt-checkbox d-block mb-6">
+								<input type="checkbox" id="checkbox-1" />
+								<label class="dt-checkbox-content" for="checkbox-1">
+									Mantenerme conectado en este dispositivo
+								</label>
+							</div>
+							<!-- /form group -->
+
+							<!-- Form Group -->
+							<div class="form-group text-center">
+								<button type="submit" class="btn btn-primary text-uppercase">
+									Ingresar
+								</button>
+							</div>
+							<!-- /form group -->
+
+
+							<div class="text-right d-none">
+								<a class="d-inline-block font-weight-500 mt-4" href="./recovery">¿No puedes acceder a tu
+									cuenta?</a>
+							</div>
+						</form>
+						<!-- /form -->
+					</div>
+					<!-- /login content inner -->
+
+
+				</div>
+				<!-- /login content section -->
+
+
+			</div>
+			<!-- /login content -->
+		</div>
+		<!-- /login container -->
+	</div>
+</div>
+<!-- /root -->
+
+<div class="modal fade" id="modalCargandoLogin" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog"
+	style="padding-top: 18%; overflow-y: visible; display: none;" aria-hidden="true">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-body">
+				<div class="progress" style="margin-bottom: 0px;">
+					<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+						aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%">
+						Autenticando. . .
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

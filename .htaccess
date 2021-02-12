@@ -1,0 +1,20 @@
+#Impedir que se pueda ver el listado de contenidos de un directorio
+
+Options All -Indexes
+
+#URLS AMIGABLES
+# Activar RewriteEngine
+
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^([a-zA-Z0-9]+)$ index.php [L]
+#la siguiente para que acepte la linea al final de la url
+#RewriteRule ^([a-zA-Z0-9]+)/$ index.php [L]
+RewriteRule ^([a-zA-Z0-9]+)/([a-zA-Z0-9]+)$ index.php [L]
+#RewriteRule ^([a-zA-Z0-9]+)/([a-zA-Z0-9]+)/$ index.php [L]
+RewriteRule ^([a-zA-Z0-9]+)/([a-zA-Z0-9]+)/([a-zA-Z0-9]+)$ index.php [L]
+RewriteRule ^([a-zA-Z0-9]+)/([a-zA-Z0-9]+)/([a-zA-Z0-9]+)/([a-zA-Z0-9]+)$ index.php [L]
+RewriteRule ^([a-zA-Z0-9]+)/([a-zA-Z0-9]+)/([a-zA-Z0-9]+)/([a-zA-Z0-9]+)/([a-zA-Z0-9]+)$ index.php [L]

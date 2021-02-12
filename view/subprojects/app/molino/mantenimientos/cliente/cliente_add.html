@@ -1,0 +1,187 @@
+<div id="addClienteHtml" class="modal fade">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content dt-card border border-w-3 border-dark-blue">
+            <!-- Card FORMULARIO-->
+            <!-- Card Header -->
+            <div class="modal-header dt-card__heading border-bottom-0">
+                <!-- Card Heading -->
+                <h3 class="dt-page__title text-center w-100" id="TituloModalCliente">Agregar Cliente</h3>
+                <!-- /card heading -->
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+
+
+            </div>
+
+            <!-- Form -->
+            <div class="dt-masonry__item">
+                <!-- Card Body -->
+                <div class="dt-card__body tabs-container p-2">
+
+                    <!-- Tab Navigation -->
+                    <ul class="nav nav-tabs " role="tablist">
+                        <li class="nav-item ">
+                            <a class="nav-link active" data-toggle="tab" href="#tab-pane-3" role="tab"
+                                aria-controls="tab-pane-3" aria-selected="false">Datos Personales
+                            </a>
+                        </li>
+                        <li class="nav-item d-none">
+                            <a class="nav-link" data-toggle="tab" href="#tab-pane-4" role="tab"
+                                aria-controls="tab-pane-4" aria-selected="false">Datos de Acceso
+                            </a>
+                        </li>
+
+                    </ul>
+                    <!-- /tab navigation -->
+
+                    <!-- Tab Content -->
+                    <div class="tab-content">
+
+                        <!-- Tab Pane -->
+                        <div id="tab-pane-3" class="tab-pane active">
+
+                            <div class="form-row card-body">
+
+                                <div class="col-sm-4 col-6 form-group">
+                                    <label for="txtTipoDocumentoCliente">Tipo de Documento</label>
+                                    <select class="form-control form-control-sm" id="txtTipoDocumentoCliente">
+                                        <option value="0">SIN DOCUMENTO</option>
+                                        <option value="1">DNI</option>
+                                        <option value="2">RUC</option>
+                                        <option value="3">CARNET DE EXTRANJERIA</option>
+                                        <option value="4">CARNET DE IDENTIDAD</option>
+                                        <option value="4">NO DOMICIALIADO</option>
+                                        <option value="3">OTRO</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-4  col-6 form-group ">
+                                    <label for="txtDocumentoCliente">Documento</label>
+                                    <input placeholder="Documento del Cliente" id="txtDocumentoCliente"
+                                        class="form-control form-control-sm" type="text" maxlength="8">
+                                </div>
+                                <div class="col-lg-4 col-sm-4 col-4 form-group">
+                                    <label for="txtSexoCliente">Sexo</label>
+                                    <select class="form-control form-control-sm" id="txtSexoCliente">
+                                        <option value="0">Seleccione...</option>
+                                        <option value="1">MASCULINO</option>
+                                        <option value="2">FEMENINO</option>
+                                        <option value="3">OTRO</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-8 col-sm-8 col-8 form-group ">
+                                    <label for="txtNombreCliente">Nombres</label>
+                                    <input placeholder="Nombre del Cliente" id="txtNombreCliente"
+                                        class="form-control form-control-sm" maxlength="240" type="text">
+                                </div>
+
+                                <div class="col-lg-4 col-sm-4 col-4 form-group ">
+                                    <label for="txtTelefonoCliente">Celular</label>
+                                    <input placeholder="Número de celular" id="txtTelefonoCliente"
+                                        class="form-control form-control-sm" type="text" maxlength="11">
+                                </div>
+                                <div class="col-lg-8 col-sm-8 col-8 form-group ">
+                                    <label for="txtEmailCliente">Email</label>
+                                    <input placeholder="Email del Cliente" id="txtEmailCliente"
+                                        class="form-control form-control-sm" maxlength="50" type="email">
+                                </div>
+
+                                <div class="col-lg-9 col-sm-8 col-8 form-group ">
+                                    <label for="txtDireccionCliente">Dirección</label>
+                                    <input placeholder="Dirección del Cliente" id="txtDireccionCliente"
+                                        class="form-control form-control-sm" type="text" maxlength="50">
+                                </div>
+                                <div class="col-lg-3 col-sm-4 col-4 form-group align-self-end ">
+                                    <label for="txtEstadoCliente" class="w-100">Estado</label>
+                                    <label class="switch">
+                                        <input id="txtEstadoCliente" class="check-impuesto" type="checkbox" checked=""
+                                            autocomplete="off">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                                <div class="col-12 form-group ">
+                                    <label for="txtAdicionalCliente">Adicional</label>
+                                    <textarea placeholder="Datos Adicionales" id="txtAdicionalCliente"
+                                        class="form-control form-control-sm" cols="30" rows="3">
+
+                                    </textarea>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- /tab pane-->
+
+                        <!-- Tab Pane -->
+                        <div id="tab-pane-4" class="tab-pane">
+                            <div class="form-row card-body">
+                                <div class="col-lg-3 col-sm-3 col-6 form-group ">
+                                    <label for="txtNombreUsuarioCliente">Usuario</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="btn btn-sm btn-primary">
+                                                <i class="icon icon-user icon-fw icon-sm"></i>
+                                            </span>
+                                        </div>
+                                        <input id="txtNombreUsuarioCliente" type="text"
+                                            class="form-control form-control-sm" placeholder="Username"
+                                            aria-label="Username">
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-3 col-6 form-group ">
+                                    <label for="txtLoginUsuarioCliente">Login</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="btn btn-sm btn-primary">
+                                                <i class="icon icon-wall icon-fw icon-sm"></i>
+                                            </span>
+                                        </div>
+                                        <input id="txtLoginUsuarioCliente" type="text"
+                                            class="form-control form-control-sm" placeholder="Login" aria-label="Login">
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-3 col-6 form-group ">
+                                    <label for="txtPassUsuarioCliente">Pass</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="btn btn-sm btn-primary">
+                                                <i class="icon icon-forgot-pass icon-fw icon-sm"></i>
+                                            </span>
+                                        </div>
+                                        <input id="txtPassUsuarioCliente" type="text"
+                                            class="form-control form-control-sm" placeholder="Username"
+                                            aria-label="Username">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- /tab pane-->
+
+
+                    </div>
+                    <!-- /tab content -->
+
+                </div>
+                <!-- /card body -->
+
+            </div>
+            <!-- Form -->
+            <form id="FrmClienteModal" class="mb-4">
+                <div class="col-lg-12 text-center">
+                    <button type="submit" class="btn btn-sm btn-outline-success">
+                        <i class="icon icon-task-manager icon-1x "></i>
+                        <small class="text-dark f-12">Registrar</small></button>
+                    <button type="reset" class="btn btn-sm ">
+                        <i class="icon icon-1x text-danger" data-icon="9"></i>
+                        <small class="text-dark f-12">Limpiar</small> </button>
+                </div>
+
+            </form>
+            <!-- /form -->
+
+
+
+        </div>
+    </div>
+</div>

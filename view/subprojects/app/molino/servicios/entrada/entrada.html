@@ -1,0 +1,158 @@
+<div id="listEntradaHtml" class="col-xl-12">
+    <!-- Module Container -->
+    <div class="dt-module__container card p-1 m-0 mw-100">
+
+        <!-- Module Header -->
+        <div class="dt-module__header card-header PY-3  px-lg-4 px-3 border-0 " style="min-height: 35px;">
+            <div class="dropdown">
+                <input type="hidden" id="pageEntrada" value="1">
+                <select id="sizePageEntrada" class="form-control form-control-sm select2-single">
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                </select>
+            </div>
+
+            <!-- Title -->
+            <div class="mx-auto text-center ">
+                <h3 class="dt-module__title " id="titleManagerEntrada">Entrada</h3>
+
+            </div>
+            <button id="btnAbrirNewEntrada" class="btn btn-sm bg-primary  text-white" type="button"
+                data-toggle="tooltip" data-html="true" title="" data-original-title="<em>Agregar Nueva Entrada</em>">
+                <i class="icon icon-circle-add-o icon-1x pulse-light"></i> <span>
+                    Nuevo</span>
+            </button>
+        </div>
+        <!-- /module header -->
+        <!-- Module Header -->
+        <div class="dt-module__header px-lg-4 px-3 border-0 form-row m-0">
+
+            <div class="col-lg-4 col-sm-6 col-12 ">
+                <label for="txtFechaIFilterEntrada" class="w-25 text-right">Desde</label>
+
+                <div class="input-group input-group-sm">
+                    <div class="input-group-prepend btn btn-outline-primary mr-1" data-target="#txtFechaIFilterEntrada"
+                        data-toggle="datetimepicker">
+                        <i class="icon icon-calendar"></i>
+
+                    </div>
+                    <input type="text" id="txtFechaIFilterEntrada" class="form-control form-control-sm"
+                        placeholder="DD/MM/AAAA">
+                    <div class="input-group-append">
+
+                        <button class="btn btn-dark btn-sm input-ii" type="button" id="btnEliminarFechaIFilterEntrada"
+                            data-toggle="tooltip" title="" data-original-title="Eliminar Fecha">
+                            <i class="icon icon-trash"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 col-12 ">
+                <label for="txtFechaFFilterEntrada" class="w-25 text-right">Hasta</label>
+                <div class="input-group input-group-sm">
+                    <div class="input-group-prepend btn btn-outline-primary mr-1" data-target="#txtFechaFFilterEntrada"
+                        data-toggle="datetimepicker">
+                        <i class="icon icon-calendar"></i>
+
+                    </div>
+                    <input type="text" id="txtFechaFFilterEntrada" class="form-control form-control-sm"
+                        placeholder="DD/MM/AAAA">
+                    <div class="input-group-append">
+
+                        <button class="btn btn-dark btn-sm input-ii" type="button" id="btnEliminarFechaFFilterEntrada"
+                            data-toggle="tooltip" title="" data-original-title="Eliminar Fecha">
+                            <i class="icon icon-trash"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-12 col-12 ">
+                <form id="FrmEntrada" class=" search-box right-side-icon mw-100">
+                    <label for="txtFilterEntrada">Filtrar</label>
+                    <input id="txtFilterEntrada" class="form-control form-control-sm " placeholder="Search in app..."
+                        data-toggle="tooltip" data-placement="top" data-original-title="Buscar" type="search" />
+                    <button type="submit" class="search-icon pt-5">
+                        <i class="icon icon-search icon-lg"></i></button>
+                </form>
+            </div>
+            <!-- Search Box -->
+
+            <!-- /search box -->
+
+        </div>
+        <!-- /module header -->
+        <!-- Module Content -->
+        <div class="dt-module__content ps-custom-scrollbar ">
+
+            <!-- Module Content Inner -->
+            <div class="dt-module__content-inner p-0" style="min-width: 760px;">
+                <!-- Widget Item -->
+                <div class="dt-widget__item border-success bg-primary text-white mb-0 pb-2">
+                    <!-- Widget Info -->
+                    <div class="dt-widget__info ">
+                        <p class="dt-widget__subtitle ">
+                            FECHA
+                        </p>
+                    </div>
+                    <!-- /widget info -->
+                    <!-- Widget Info -->
+                    <div class="dt-widget__info ">
+                        <p class="dt-widget__subtitle ">
+                            CLIENTE
+                        </p>
+                    </div>
+                    <!-- /widget info -->
+
+                    <!-- Widget Info -->
+                    <div class="dt-widget__info ">
+                        <p class="dt-widget__subtitle ">
+                            ESTADO
+                        </p>
+                    </div>
+                    <!-- /widget info -->
+                    <!-- Widget Info -->
+                    <div class="dt-widget__info ">
+                        <p class="dt-widget__subtitle ">
+                            CANTIDAD
+                        </p>
+                    </div>
+                    <!-- /widget info -->
+                    <!-- Widget Info -->
+                    <div class="dt-widget__info ">
+                        <p class="dt-widget__subtitle ">
+                            DOCUMENTO
+                        </p>
+                    </div>
+                    <!-- /widget info -->
+                    <!-- Widget Info -->
+                    <div class="dt-widget__info ">
+                        <p class="dt-widget__subtitle ">
+                            USUARIO
+                        </p>
+                    </div>
+                    <!-- /widget info -->
+                    <!-- Widget Extra -->
+                    <div class="dt-widget__extra">
+                        <div class="dt-task" style="min-width: 35px;">
+                        </div>
+                    </div>
+                </div>
+                <!-- List -->
+                <div id="tbodyEntrada" class="dt-widget dt-widget-hover-bg text-light-gray">
+                </div>
+                <!-- /list -->
+
+                <!-- pagination Entrada -->
+                <nav class="pt-2 border-top" aria-label="Page navigation example">
+                    <ul id="paginationEntrada" class="pagination pagination-sm justify-content-center">
+                    </ul>
+                </nav>
+                <!-- /pagination Entrada -->
+            </div>
+            <!-- /module content inner -->
+
+        </div>
+        <!-- /module content -->
+
+    </div>
+    <!-- /module container -->
+</div>

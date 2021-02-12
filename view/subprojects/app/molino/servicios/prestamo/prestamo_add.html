@@ -1,0 +1,291 @@
+<div id="addPrestamoHtml" class="form-row d-none">
+
+  <div class="dt-page__header card-header w-100 m-0 px-5 d-flex py-2 mb-2">
+    <a href="javascript:void(0)" class="d-inline-block cerrar-prestamo py-2">
+      <i class="icon icon-arrow-long-left icon-2x mr-3"></i> <span class="align-middle">Regresar </span>
+    </a>
+    <h1 class="dt-page__title mx-auto" id="TituloModalPrestamo">Agregar Prestamo del Producto</h1>
+  </div>
+  <!-- COMPRA LISTA-->
+  <div class="col-xl-8 order-2">
+    <div class=" card h-100 m-0 p-5">
+      <div class="form-row h-100">
+        <div class="col-lg-8 col-sm-12">
+          <div class="form-row">
+            <div class="col-xl-6 col-sm-6 form-group">
+              <label for="txtMontoSolicitadoPrestamo" class="form">Monto Solicitado</label>
+              <div class="input-group input-group-sm ">
+                <div class="input-group-prepend align-self-center">
+                  <span class="input-group-text">S/.</span>
+                </div>
+                <input placeholder="" id="txtMontoSolicitadoPrestamo" class="form-control form-control-sm" maxlength="6"
+                  type="number">
+              </div>
+
+            </div>
+            <div class="col-xl-6 col-sm-6 form-group">
+              <label for="txtTasaEfectivaPrestamo" class="form">Tasa Efectiva Mensual Fija</label>
+              <div class="input-group input-group-sm ">
+
+                <input placeholder="" id="txtTasaEfectivaPrestamo" class="form-control form-control-sm" maxlength="6"
+                  type="number" value="3.70">
+                <div class="input-group-append align-self-center">
+                  <span class="input-group-text">%</span>
+                </div>
+              </div>
+
+            </div>
+            <div class="col-xl-6 col-sm-6 form-group">
+              <label for="txtPlazoCuotaPrestamo" class="form">Plazo Cuotas</label>
+              <input placeholder="" id="txtPlazoCuotaPrestamo" class="form-control form-control-sm" maxlength="6"
+                type="number">
+            </div>
+            <div class="col-xl-6 col-sm-6 form-group">
+              <label for="txtFechaDesembolsoPrestamo">Fecha Desembolso</label>
+
+              <div class="input-group input-group-sm">
+                <div class="input-group-prepend btn btn-primary mr-1" data-target="#txtFechaDesembolsoPrestamo"
+                  data-toggle="datetimepicker">
+                  <i class="icon icon-calendar"></i>
+
+                </div>
+                <input type="text" id="txtFechaDesembolsoPrestamo" class="form-control form-control-sm"
+                  placeholder="DD/MM/AAAA" data-dtp="dtp_t9AHq">
+                <div class="input-group-append">
+
+                  <button class="btn btn-dark btn-sm input-ii" type="button" id="btnEliminarFechaDesembolsoPrestamo"
+                    data-toggle="tooltip" title="" data-original-title="Eliminar Fecha">
+                    <i class="icon icon-trash"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-6 col-sm-6 form-group">
+              <label for="txtTceaPrestamo" class="form">TCEA</label>
+              <div class="input-group input-group-sm ">
+                <div class="input-group-prepend align-self-center">
+                  <span class="input-group-text">S/.</span>
+                </div>
+                <input placeholder="" id="txtTceaPrestamo" class="form-control form-control-sm" maxlength="6"
+                  type="number">
+              </div>
+
+            </div>
+            <div class="col-xl-6 col-sm-6 form-group">
+              <label for="txtITFPrestamo" class="form">ITF</label>
+              <div class="input-group input-group-sm ">
+
+                <input placeholder="" id="txtITFPrestamo" class="form-control form-control-sm" maxlength="6"
+                  value="0.005" type="number">
+                <div class="input-group-append align-self-center">
+                  <span class="input-group-text">%</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-sm-12 border-lg-left ">
+          <div class="form-row">
+            <div class="col-xl-12 col-sm-6 form-group">
+              <label for="txtTipoCronogramaPrestamo" class="form">Tipo de Cronograma</label>
+              <select class="form-control form-control-sm" id="txtTipoCronogramaPrestamo">
+                <option value="1">Mensual</option>
+                <option value="2">Quincenal</option>
+                <option value="3">Trimestral</option>
+              </select>
+            </div>
+            <div class="col-xl-12 col-sm-6 form-group d-none">
+              <label for="txtTipoGraciaPrestamo" class="form">Tipo de Gracia</label>
+              <select class="form-control form-control-sm" id="txtTipoGraciaPrestamo">
+                <option value="1">Sin Gracia</option>
+                <option value="2">Gracia Relativa</option>
+                <option value="3">Gracia Absoluta</option>
+              </select>
+              <label for="txtNumeroCuotaGracia" class="sr-only">Número de Cuotas</label>
+              <input placeholder="Nombre de la Unidad de Medida" id="txtNumeroCuotaGracia"
+                class="form-control form-control-sm d-none" maxlength="6" type="number">
+            </div>
+            <div class="col-xl-12 col-sm-6 form-group">
+              <label for="txtTipoFechaPrestamo" class="form">Tipo de Fecha</label>
+              <select class="form-control form-control-sm" id="txtTipoFechaPrestamo">
+                <option value="1">Fecha Fija</option>
+                <option value="2">Fecha Relativa</option>
+              </select>
+            </div>
+            <div class="col-xl-12 col-sm-6 form-group ">
+              <label for="txtDiaPagoPrestamo" class="form">Dia de Pago</label>
+              <input placeholder="" id="txtDiaPagoPrestamo" class="form-control form-control-sm" maxlength="6"
+                type="number">
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="col-xl-12 form-group text-center">
+          <button id="btnCalcularCronograma" type="button" class="btn btn-sm btn-primary">
+            <a class="text-light f-12 pulse-light " href="#tbodySeguroC">Calcular</a>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+
+
+  </div>
+
+  <div class="col-xl-4 order-1">
+    <!-- Module Container -->
+    <div class="dt-module__container mw-100 card p-2  m-0">
+      <!-- Module Content -->
+      <div class="dt-module__content ps-custom-scrollbar ">
+        <!-- Module Content Inner -->
+        <div class="dt-module__content-inner p-2">
+
+          <div class="dt-entry__header mb-5">
+            <!-- Entry Heading -->
+            <div class="dt-entry__heading">
+              <h3 class="dt-page__title mb-0">Cliente <span class="f-12 text-light-gray"></span>
+              </h3>
+            </div>
+            <!-- /entry heading -->
+          </div>
+          <!-- Cliente-->
+          <div class="col-xl-12 px-0 pb-2">
+            <label for="txtClienteUbicacionProducto" class="sr-only">Cliente</label>
+            <div class="input-group">
+              <input id="txtClienteUbicacionProducto" type="text" class="form-control form-control-sm"
+                placeholder="Seleccionar Cliente -->" disabled>
+              <div class="input-group-append">
+                <button id="btnSeleccionarCliente" class="btn btn-sm btn-outline-primary" type="button"><i
+                    class="icon icon-open-new-tab icon-sm">
+                  </i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- PRODUCTO -->
+          <div class="dt-entry__header mb-5 d-none">
+
+            <!-- Entry Heading -->
+            <div class="dt-entry__heading d-flex">
+              <h3 class="dt-page__title align-content-end" id="titleManagerSeguroC">Seguro
+              </h3>
+              <form id="FrmSeguroC" class="w-auto">
+
+                <button type="submit" class="btn btn-sm btn-default">
+                  <i class="icon icon-search icon-lg"></i></button>
+
+
+              </form>
+            </div>
+            <!-- /entry heading -->
+          </div>
+          <!-- Dropdown -->
+
+          <!-- SEGUROS -->
+          <div class="dt-entry__header mb-5 p-0">
+
+            <!-- Entry Heading -->
+            <div class="dt-entry__heading d-flex col-12 p-0">
+              <h3 class="dt-page__title w-75">Seguro
+              </h3>
+              <div class="input-group input-group-sm w-50 ">
+
+                <input placeholder="" id="txtMontoSeguroPrestamo" class="form-control form-control-sm " maxlength="12"
+                  type="number">
+                <div class="input-group-append">
+                  <span class="input-group-text">%</span>
+                </div>
+              </div>
+
+            </div>
+            <!-- /entry heading -->
+          </div>
+          <!-- Dropdown -->
+
+
+          <div class="dt-contacts contacts-list m-0" id="tbodySeguroC">
+            <!-- /SEGUROS-->
+
+          </div>
+
+        </div>
+        <!-- /module content inner -->
+
+      </div>
+      <!-- /module content -->
+
+
+
+    </div>
+    <!-- /module container -->
+
+  </div>
+  <!-- COMPRA LISTA-->
+  <div class="col-xl-12 mt-2 order-3">
+
+    <!-- Module Container -->
+    <div class="dt-module__container mw-100 card ">
+
+      <!-- Module Content -->
+      <div class="dt-module__content ps-custom-scrollbar ">
+        <!-- Module Content Inner -->
+        <div class="dt-module__content-inner p-2" style="min-width: 760px;">
+          <!-- Grid Item -->
+
+          <!-- Tables -->
+          <div class="table-responsive">
+            <table class="table table-bordered mb-0">
+              <thead class="thead-light">
+                <tr>
+                  <th scope="col">#</th>
+                  <th class="text-uppercase text-center p-2" scope="col">FECHA INICIAL</th>
+                  <th class="text-uppercase text-center p-2" scope="col">FECHA PAGO</th>
+                  <th class="text-uppercase text-center p-2" scope="col">N° DÍAS</th>
+                  <th class="text-uppercase text-center p-2" scope="col">CAPITAL</th>
+                  <th class="text-uppercase text-center p-2" scope="col">
+                    AMORTIZACIÓN</th>
+                  <th class="text-uppercase text-center p-2" scope="col">INTERÉS</th>
+                  <th class="text-uppercase text-center p-2" scope="col">SEGUROS</th>
+                  <th class="text-uppercase text-center p-2" scope="col">ITF</th>
+                  <th class="text-uppercase text-center p-2" scope="col">CUOTA</th>
+
+                </tr>
+
+
+              </thead>
+              <tbody id="tbodyPrestamoDetalle">
+                <tr>
+                  <td class="text-center" colspan="11">NO HAY OPERACIÓN
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- /tables -->
+          <div class="col-xl-12 form-group text-center mt-4">
+            <form id="FrmPrestamoModal" class="">
+              <button type="submit" class="btn btn-sm btn-shadow btn-default compose-btn btn-rounded px-2"><i
+                  class="icon icon-invoice-new icon-fw icon-2x">
+                </i>
+                <span class="text-dark f-12 pulse-info">Registrar</span>
+              </button>
+
+            </form>
+          </div>
+          <!-- /grid item -->
+        </div>
+        <!-- /module content inner -->
+
+      </div>
+      <!-- /module content -->
+
+
+    </div>
+  </div>
+
+</div>

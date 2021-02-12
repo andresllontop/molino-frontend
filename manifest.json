@@ -1,0 +1,24 @@
+{
+    "name": "#MolinoRey",
+    "short_name": "#MolinoRey",
+    "description": "Bienvenidos a Molino el Rey",
+    "background_color": "blue",
+    "theme_color": "red",
+    "orientation": "portrait",
+    "display": "standalone",
+    "start_url": "./?utm_source=web_app_manifest",
+    "scope": "./",
+    "lang": "es-MX",
+    "icons": [
+        {
+            "src": "./assets/images/logo(512x512).png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "./assets/images/favicon.ico",
+            "sizes": "32x32",
+            "type": "image/x-icon"
+        }
+    ]
+}

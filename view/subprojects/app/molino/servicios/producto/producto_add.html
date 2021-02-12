@@ -1,0 +1,192 @@
+<div id="addProductoHtml" class="col-xl-12 p-sm-0">
+    <div class="" role="document">
+        <div class="dt-card border border-w-3 border-dark-blue">
+            <!-- Card FORMULARIO-->
+            <!-- Card Header -->
+            <div class="modal-header dt-card__heading border-bottom-0">
+                <!-- Card Heading -->
+                <h3 class="dt-page__title text-center w-100" id="TituloModalProducto">Agregar Producto</h3>
+                <!-- /card heading -->
+
+                <a id="btnAbrirNewProducto" href="javascript:void(0)" class="quick-menu d-none pr-5 "><i
+                        class="icon icon-circle-add-o icon-1x"></i></a>
+
+            </div>
+
+            <!-- Form -->
+            <!-- Form -->
+            <form id="FrmProductoModal" class="dt-card__body form-row pt-0">
+                <div class="col-lg-4 col-sm-4 col-8 form-group">
+                    <label for="txtCodigoProducto" class="form">Codigo</label>
+                    <input placeholder="Codigo del Producto" id="txtCodigoProducto" class="form-control form-control-sm"
+                        maxlength="15" type="text">
+                </div>
+                <div class="col-lg-7 col-sm-6 col-12 form-group">
+                    <label for="txtDescripcionProducto" class="form">Descripcion</label>
+                    <input placeholder="Nombre del Producto" id="txtDescripcionProducto"
+                        class="form-control form-control-sm" maxlength="45" type="text">
+                </div>
+                <div class="col-lg-1 col-sm-2 col-4 form-group align-self-end ">
+                    <label for="txtEstadoProducto" class="w-100">Estado</label>
+                    <label class="switch">
+                        <input id="txtEstadoProducto" class="check-impuesto" type="checkbox" checked=""
+                            autocomplete="off">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <!-- Unidad Ingreso -->
+                <div class="col-lg-4 col-sm-4 col-10 form-group ">
+                    <label for="txtUnidadMedidaIngresoProducto">Unidad de Medida Superior</label>
+                    <div class="input-group">
+                        <input id="txtUnidadMedidaIngresoProducto" type="text" class="form-control form-control-sm"
+                            placeholder="Seleccionar Unidad de Medida -->" disabled>
+                        <div class="input-group-append">
+                            <button id="btnSeleccionarUnidadMedidaIngreso" class="btn btn-sm btn-outline-primary"
+                                type="button"><i class="icon icon-open-new-tab icon-sm">
+                                </i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class=" col-lg-1 col-sm-2 col-2 form-group align-self-end text-center p-0">
+                    <span class="btn px-0">
+                        <i class="icon icon-chevrolet-left icon-lg">
+                        </i>
+                        <i class="icon icon-chevrolet-right icon-lg">
+                        </i>
+                    </span>
+                </div>
+                <div class="col-lg-3 col-sm-2 col-4 form-group align-self-end ">
+                    <label for="txtFactorConversionProducto" class="form">Factor de Conversión</label>
+
+                    <input placeholder="Cantidad minima del Producto" id="txtFactorConversionProducto"
+                        class="form-control form-control-sm" maxlength="6" type="number" value="50">
+                </div>
+
+                <!-- Unidad Salida -->
+                <div class="col-lg-4 col-sm-4 col-8 form-group ">
+                    <label for="txtUnidadMedidaSalidaProducto">Unidad de Medida Inferior</label>
+                    <div class="input-group">
+                        <input id="txtUnidadMedidaSalidaProducto" type="text" class="form-control form-control-sm"
+                            placeholder="Seleccionar Unidad de Medida -->" disabled>
+                        <div class="input-group-append">
+                            <button id="btnSeleccionarUnidadMedidaSalida" class="btn btn-sm btn-outline-primary"
+                                type="button"><i class="icon icon-open-new-tab icon-sm">
+                                </i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="border-dashed col-12">
+
+                <!-- Unidad Ingreso data -->
+
+
+                <div class="col-lg-4 col-sm-4 col-6 form-group align-self-end">
+                    <label for="txtPrecioCompraProducto" class="form">Precio de Compra Mínimo</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text py-1">S/.</span>
+                        </div>
+                        <input placeholder="Precio por Servicio" id="txtPrecioCompraProducto"
+                            class="form-control form-control-sm" maxlength="6" type="text" value="80">
+                        <div class="input-group-append">
+                            <span class="align-self-center pl-2 unidad-medida-1"></span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-sm-4 col-6 form-group align-self-end">
+                    <label for="txtPrecioVentaProducto" class="form">Precio de Venta</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text py-1">S/.</span>
+                        </div>
+                        <input placeholder="Precio por Servicio" id="txtPrecioVentaProducto"
+                            class="form-control form-control-sm" maxlength="6" type="text" value="90">
+                        <div class="input-group-append">
+                            <span class="align-self-center pl-2 unidad-medida-1"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-sm-4 col-6 form-group align-self-end">
+                    <label for="txtPrecioServicioProducto" class="form">Precio por Servicio</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text py-1">S/.</span>
+                        </div>
+                        <input placeholder="Precio por Servicio" id="txtPrecioServicioProducto"
+                            class="form-control form-control-sm" maxlength="6" type="text" value="7">
+                        <div class="input-group-append">
+                            <span class="align-self-center pl-2 unidad-medida-1"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="border-dashed col-12">
+
+                <!-- Unidad Salida data-->
+
+                <div class="col-lg-4 col-sm-4 col-6 form-group align-self-end">
+                    <label for="txtPrecioCompraProducto-2" class="form">Precio de Compra Mínimo</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text py-1">S/.</span>
+                        </div>
+                        <input placeholder="Precio por Servicio" id="txtPrecioCompraProducto-2"
+                            class="form-control form-control-sm" maxlength="6" type="text" value="80">
+                        <div class="input-group-append">
+                            <span class="align-self-center pl-2 unidad-medida-2"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-sm-4 col-6 form-group align-self-end">
+                    <label for="txtPrecioVentaProducto-2" class="form">Precio de Venta</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text py-1">S/.</span>
+                        </div>
+                        <input placeholder="Precio por Servicio" id="txtPrecioVentaProducto-2"
+                            class="form-control form-control-sm" maxlength="6" type="text" value="90">
+                        <div class="input-group-append">
+                            <span class="align-self-center pl-2 unidad-medida-2"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-sm-4 col-6 form-group align-self-end">
+                    <label for="txtPrecioServicioProducto-2" class="form">Precio por Servicio</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text py-1">S/.</span>
+                        </div>
+                        <input placeholder="Precio por Servicio" id="txtPrecioServicioProducto-2"
+                            class="form-control form-control-sm" maxlength="6" type="text" value="7">
+                        <div class="input-group-append">
+                            <span class="align-self-center pl-2 unidad-medida-2"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12 text-center">
+                    <button type="submit" class="btn btn-sm btn-outline-light">
+                        <i class="icon icon-task-manager icon-1x text-success"></i>
+                        <small class="text-dark f-12">Registrar</small></button>
+                    <button type="reset" class="btn btn-sm ">
+                        <i class="icon icon-1x text-danger" data-icon="9"></i>
+                        <small class="text-dark f-12">Limpiar</small> </button>
+                </div>
+
+            </form>
+            <!-- /form -->
+            <!-- /form -->
+
+
+        </div>
+    </div>
+</div>

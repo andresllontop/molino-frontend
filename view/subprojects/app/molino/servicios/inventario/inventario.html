@@ -1,0 +1,115 @@
+<!-- Card LISTADO DE INVENTARIO-->
+<div id="listInventarioHtml" class="col-xl-12 d-none">
+    <!-- Module Container -->
+    <div class="dt-module__container card p-1 m-0 mw-100">
+
+        <!-- Module Header -->
+        <div class="dt-module__header card-header pb-0 py-3  px-lg-4 px-3 border-0 " style="min-height: 35px;">
+            <a href="javascript:void(0)" class="d-inline-block cerrar-inventario py-2">
+                <i class="icon icon-arrow-long-left icon-2x mr-3"></i> <span class="align-middle">Regresar </span>
+            </a>
+            <!-- Title -->
+            <div class="mx-auto text-center ">
+                <h3 class="dt-module__title " id="titleManagerInventario">KARDEX </h3>
+
+            </div>
+
+        </div>
+        <!-- /module header -->
+        <!-- Module Header -->
+        <div class="dt-module__header py-1  px-lg-4 px-3 border-0 form-row m-0">
+
+            <div class="col-lg-6 col-sm-6 col-12 ">
+                <label for="txtFechaIFilterInventario" class="w-25 text-right">Desde</label>
+
+                <div class="input-group input-group-sm">
+                    <div class="input-group-prepend btn btn-primary mr-1" data-target="#txtFechaIFilterInventario"
+                        data-toggle="datetimepicker">
+                        <i class="icon icon-calendar"></i>
+
+                    </div>
+                    <input type="text" id="txtFechaIFilterInventario" class="form-control form-control-sm"
+                        placeholder="DD/MM/AAAA">
+                    <div class="input-group-append">
+
+                        <button class="btn btn-dark btn-sm input-ii" type="button"
+                            id="btnEliminarFechaIFilterInventario" data-toggle="tooltip" title=""
+                            data-original-title="Eliminar Fecha">
+                            <i class="icon icon-trash"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-6 col-12 ">
+                <label for="txtFechaFFilterInventario" class="w-25 text-right">Hasta</label>
+                <div class="input-group input-group-sm">
+                    <div class="input-group-prepend btn btn-primary mr-1" data-target="#txtFechaFFilterInventario"
+                        data-toggle="datetimepicker">
+                        <i class="icon icon-calendar"></i>
+
+                    </div>
+                    <input type="text" id="txtFechaFFilterInventario" class="form-control form-control-sm"
+                        placeholder="DD/MM/AAAA">
+                    <div class="input-group-append">
+                        <button class="btn btn-dark btn-sm input-ii" type="button"
+                            id="btnEliminarFechaFFilterInventario" data-toggle="tooltip" title=""
+                            data-original-title="Eliminar Fecha">
+                            <i class="icon icon-trash"></i></button>
+                        <form id="FrmInventario" class="ml-5">
+                            <button type="submit" class="btn btn-sm btn-info">
+                                <i class="icon icon-search icon-lg"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Search Box -->
+
+            <!-- /search box -->
+
+        </div>
+        <!-- /module header -->
+        <!-- Module Content -->
+        <div class="dt-module__content ps-custom-scrollbar ">
+
+            <!-- Module Content Inner -->
+            <div class="dt-module__content-inner p-0" style="min-width: 760px;">
+                <!-- Tables -->
+                <div class="table-responsive">
+                    <table class="table table-bordered mb-0">
+                        <thead class="thead-light">
+                            <tr>
+                                <th class="text-uppercase text-center p-2" scope="col" rowspan="2">FECHA</th>
+                                <th class="text-uppercase text-center p-2" scope="col" rowspan="2">TIPO TRANSACCIÓN
+                                </th>
+
+
+                                <th class="text-uppercase text-center p-2 bg-info text-white" scope="col">
+                                    ENTRADA</th>
+                                <th class="text-uppercase text-center p-2 bg-success text-white" scope="col">SALIDA</th>
+                                <th class="text-uppercase text-center p-2" scope="col">SALDO</th>
+
+                            </tr>
+
+
+                        </thead>
+                        <tbody id="tbodyInventario">
+                            <tr>
+                                <td class="text-center" colspan="11">NO HAY INVENTARIO
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /tables -->
+
+
+            </div>
+            <!-- /module content inner -->
+
+
+        </div>
+        <!-- /module content -->
+
+    </div>
+    <!-- /module container -->
+</div>

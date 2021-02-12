@@ -1,0 +1,84 @@
+<div id="addDocumentoHtml" class="modal fade" style="z-index: 1049;overflow-y: scroll;">
+    <div class=" modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content dt-card border border-w-3 border-dark-blue">
+            <!-- Card FORMULARIO-->
+            <!-- Card Header -->
+            <div class="modal-header dt-card__heading border-bottom-0">
+                <!-- Card Heading -->
+                <h3 class="dt-page__title text-center w-100" id="TituloModalDocumento"> Agregar Documento</h3>
+                <!-- /card heading -->
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+
+            <!-- Form -->
+            <!-- Form -->
+            <form id="FrmDocumentoModal" class="modal-body" autocomplete="off">
+                <div class="form-row">
+                    <div class="col-xl-12 form-group">
+                        <label for="txtFechaDocumento" class="col-form-label text-sm-left">Fecha de Emisión</label>
+
+                        <div class="input-group date" id="FechaDocumento" data-target-input="nearest">
+                            <div class="input-group-prepend" data-target="#FechaDocumento" data-toggle="datetimepicker">
+                                <div class="input-group-text"><i class="icon icon-calendar"></i></div>
+                            </div>
+                            <input id="txtFechaDocumento" type="text" class="form-control datetimepicker-input"
+                                data-target="#FechaDocumento">
+
+                        </div>
+                    </div>
+
+
+                    <div class="col-sm-6 form-group">
+                        <label for="txtComprobante" class="">Comprobante</label>
+                        <div class="input-group">
+                            <input id="txtComprobante" type="text" class="form-control form-control-sm"
+                                placeholder="Seleccionar Comprobante -->" disabled>
+                            <div class="input-group-append">
+                                <button id="btnSeleccionarComprobante" class="btn btn-sm btn-outline-primary"
+                                    type="button"><i class="icon icon-open-new-tab icon-sm">
+                                    </i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 form-group">
+                        <label for="txtSerieDocumento" class="form">Serie</label>
+                        <input placeholder="ejemp: B001 / F001 / T001" id="txtSerieDocumento"
+                            class="form-control form-control-sm" maxlength="20" type="text">
+                    </div>
+                    <div class="col-xl-6 form-group">
+                        <label for="txtNumeroInicialDocumento" class="form">Número Inicial</label>
+                        <input placeholder="1" id="txtNumeroInicialDocumento" class="form-control form-control-sm"
+                            value="1" maxlength="6" type="number">
+                    </div>
+                    <div class="col-xl-6 form-group">
+                        <label for="txtNumeroFinalDocumento" class="form">Número Final</label>
+                        <input placeholder="100" id="txtNumeroFinalDocumento" class="form-control form-control-sm"
+                            value="100" maxlength="6" type="number">
+                    </div>
+                    <div class="col-xl-12 form-group">
+                        <label for="txtNumeroActualDocumento" class="form">Número Actual</label>
+                        <input placeholder="0" id="txtNumeroActualDocumento" class="form-control form-control-sm"
+                            value="0" maxlength="6" type="number">
+                    </div>
+                    <div class="col-xl-12 text-center">
+                        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cerrar
+                        </button>
+                        <button type="submit" class="btn btn-sm btn-outline-light">
+                            <i class="icon icon-task-manager icon-1x text-success"></i>
+                            <small class="text-dark f-12">Registrar</small></button>
+
+                    </div>
+                </div>
+
+
+            </form>
+            <!-- /form -->
+            <!-- /form -->
+
+
+        </div>
+    </div>
+</div>

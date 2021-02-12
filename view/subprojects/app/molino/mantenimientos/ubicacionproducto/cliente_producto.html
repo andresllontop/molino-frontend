@@ -1,0 +1,283 @@
+<div id="addClienteProductoHtml" class="modal fade" style="z-index: 1049;overflow-y: scroll;">
+    <div class=" modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content dt-card  border border-w-2 border-indigo">
+            <!-- Card FORMULARIO-->
+            <!-- Card Header -->
+            <div class="modal-header dt-card__heading border-bottom-0">
+                <!-- Card Heading -->
+                <h3 class="dt-page__title text-center w-100" id="TituloModalClienteProducto">Agregar Productos al
+                    Cliente
+                </h3>
+
+
+                <button id="btnSubmitExistencia" class="btn btn-sm bg-primary text-white  d-none " type="button"
+                    data-toggle="tooltip" data-html="true" title="" data-original-title="<em>Agregar</em>">
+                    <i class="icon icon-circle-add-o icon-1x pulse-light "></i>
+                </button>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+
+            <!-- Form -->
+            <div class="modal-body ">
+
+                <div class="form-row">
+
+                    <!-- Cliente-->
+                    <div class="col-xl-6 form-group">
+                        <label for="txtClienteUbicacionProductoOtro" class="">Cliente</label>
+                        <div class="input-group">
+                            <input id="txtClienteUbicacionProductoOtro" type="text" class="form-control form-control-sm"
+                                placeholder="Seleccionar Cliente -->" disabled>
+                            <div class="input-group-append">
+                                <button id="btnSeleccionarClienteOtro" class="btn btn-sm btn-outline-primary"
+                                    type="button"><i class="icon icon-open-new-tab icon-sm">
+                                    </i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ALMACÉN-->
+                    <div class="col-xl-6 form-group">
+                        <label for="txtAlmacenUbicacionProductoOtro" class="">Almacén</label>
+                        <div class="input-group">
+                            <input id="txtAlmacenUbicacionProductoOtro" type="text" class="form-control form-control-sm"
+                                placeholder="Seleccionar Almacen -->" disabled>
+                            <div class="input-group-append">
+                                <button id="btnSeleccionarAlmacenOtro" class="btn btn-sm btn-outline-primary"
+                                    type="button"><i class="icon icon-open-new-tab icon-sm">
+                                    </i>
+                                </button>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- PRODUCTO-->
+                    <div class="col-xl-6 form-group">
+                        <label for="txtProductoOtro" class="">Producto</label>
+                        <div class="input-group">
+                            <input id="txtProductoOtro" type="text" class="form-control form-control-sm"
+                                placeholder="Seleccionar Producto -->" disabled>
+                            <div class="input-group-append">
+                                <button id="btnSeleccionarProductoOtro" class="btn btn-sm btn-outline-primary"
+                                    type="button"><i class="icon icon-open-new-tab icon-sm">
+                                    </i>
+                                </button>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 form-group">
+                        <label for="txtCodigoClienteProducto" class="form">Ubicación</label>
+                        <input placeholder="Codigo de la ubicacion" id="txtCodigoClienteProducto"
+                            class="form-control form-control-sm" maxlength="25" type="text">
+                    </div>
+
+
+                    <form id="FrmClienteProductoModal">
+                        <div class="col-12 form-row">
+                            <hr class="border-dashed col-12">
+
+                            <!-- Unidad Ingreso data -->
+                            <div class="col-lg-4 col-sm-4 col-6 form-group align-self-end">
+                                <label for="txtPrecioCompraProducto" class="form">Precio de Compra Mínimo</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text py-1">S/.</span>
+                                    </div>
+                                    <input placeholder="Precio por Servicio" id="txtPrecioCompraProducto"
+                                        class="form-control form-control-sm" maxlength="6" type="text" value="0">
+                                    <div class="input-group-append">
+                                        <span class="align-self-center pl-2 unidad-medida-1"></span>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-sm-4 col-6 form-group align-self-end">
+                                <label for="txtPrecioVentaProducto" class="form">Precio de Venta</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text py-1">S/.</span>
+                                    </div>
+                                    <input placeholder="Precio por Servicio" id="txtPrecioVentaProducto"
+                                        class="form-control form-control-sm" maxlength="6" type="text" value="0">
+                                    <div class="input-group-append">
+                                        <span class="align-self-center pl-2 unidad-medida-1"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-sm-4 col-6 form-group align-self-end">
+                                <label for="txtPrecioServicioProducto" class="form">Precio por Servicio</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text py-1">S/.</span>
+                                    </div>
+                                    <input placeholder="Precio por Servicio" id="txtPrecioServicioProducto"
+                                        class="form-control form-control-sm" maxlength="6" type="text" value="0">
+                                    <div class="input-group-append">
+                                        <span class="align-self-center pl-2 unidad-medida-1"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr class="border-dashed col-12">
+
+                            <!-- Unidad Salida data-->
+                            <div class="col-lg-4 col-sm-4 col-6 form-group align-self-end">
+                                <label for="txtPrecioCompraProducto-2" class="form">Precio de Compra Mínimo</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text py-1">S/.</span>
+                                    </div>
+                                    <input placeholder="Precio por Servicio" id="txtPrecioCompraProducto-2"
+                                        class="form-control form-control-sm" maxlength="6" type="text" value="0">
+                                    <div class="input-group-append">
+                                        <span class="align-self-center pl-2 unidad-medida-2"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-sm-4 col-6 form-group align-self-end">
+                                <label for="txtPrecioVentaProducto-2" class="form">Precio de Venta</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text py-1">S/.</span>
+                                    </div>
+                                    <input placeholder="Precio por Servicio" id="txtPrecioVentaProducto-2"
+                                        class="form-control form-control-sm" maxlength="6" type="text" value="0">
+                                    <div class="input-group-append">
+                                        <span class="align-self-center pl-2 unidad-medida-2"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-sm-4 col-6 form-group align-self-end">
+                                <label for="txtPrecioServicioProducto-2" class="form">Precio por Servicio</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text py-1">S/.</span>
+                                    </div>
+                                    <input placeholder="Precio por Servicio" id="txtPrecioServicioProducto-2"
+                                        class="form-control form-control-sm" maxlength="6" type="text" value="0">
+                                    <div class="input-group-append">
+                                        <span class="align-self-center pl-2 unidad-medida-2"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-12 form-group text-center">
+                                <!-- Form -->
+                                <button type="submit" class="btn btn-sm btn-outline-light">
+                                    <i class="icon icon-task-manager icon-1x text-success"></i>
+                                    <small class="text-dark f-12">Registrar</small></button>
+                                <button type="reset" class="btn btn-sm ">
+                                    <i class="icon icon-1x text-danger" data-icon="9"></i>
+                                    <small class="text-dark f-12">Limpiar</small> </button>
+                                <!-- /form -->
+                            </div>
+                        </div>
+
+                    </form>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div id="modalOpenAjuste" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+
+        <!-- Modal Content -->
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h3 class="modal-title" id="model-5">Ajustar Existencia</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <!-- /modal header -->
+
+            <!-- Modal Body -->
+            <div class="modal-body">
+                <!-- Widget Info -->
+                <div class="col-12 form-group">
+                    <div class="input-group">
+
+                        <div class="input-group-prepend">
+                            <span class="btn py-1 btn-primary btn-cantidad-menos molino-cursor-mano"> <i
+                                    class="icon icon-minus icon-2x"></i></span>
+                        </div>
+
+                        <input id="txtAjustePresentacion"
+                            class="form-control form-control-sm cantidad-ajuste p-1 text-right" type="number" value="0">
+
+                        <div class="input-group-append">
+                            <span class="btn py-1 btn-primary btn-cantidad-mas molino-cursor-mano">
+                                <i class="icon icon-plus icon-2x"></i>
+                            </span>
+                        </div>
+                        <label class="px-2 align-self-center" for="txtAjustePresentacion"></label>
+
+                    </div>
+
+                </div>
+                <div class="col-12 form-group">
+
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="btn py-1 btn-primary btn-cantidad-menos2 molino-cursor-mano"> <i
+                                    class="icon icon-minus icon-2x"></i></span>
+                        </div>
+
+                        <input id="txtAjuste2Presentacion"
+                            class="form-control form-control-sm cantidad-ajuste2 p-1 text-right" type="number"
+                            value="0">
+
+                        <div class="input-group-append">
+                            <span class="btn py-1 btn-primary btn-cantidad-mas2 molino-cursor-mano">
+                                <i class="icon icon-plus icon-2x"></i>
+                            </span>
+                        </div>
+                        <label class="px-2 align-self-center" for="txtAjuste2Presentacion"></label>
+
+                    </div>
+                </div>
+
+
+                <!-- /widget info -->
+            </div>
+            <!-- /modal body -->
+
+            <!-- Modal Footer -->
+            <div class="modal-footer">
+                <!-- Form -->
+                <form id="FrmAjustePresentacionModal">
+                    <div class="col-lg-12 text-center">
+                        <button type="submit" class="btn btn-sm btn-success">
+                            <i class="icon icon-task-manager icon-1x "></i>
+                            <small class="text-dark f-12">Registrar</small></button>
+                    </div>
+
+                </form>
+                <!-- /form -->
+            </div>
+            <!-- /modal footer -->
+
+        </div>
+        <!-- modal content -->
+
+    </div>
+</div>
+<!-- /modal -->

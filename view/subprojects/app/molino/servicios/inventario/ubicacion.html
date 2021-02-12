@@ -1,0 +1,168 @@
+<!-- Card LISTADO DE UBCACION-->
+
+<div class="col-xl-12 " id="listUbicacionHtml">
+    <!-- Module -->
+    <div class="dt-module">
+
+        <!-- Module Container -->
+        <div class="dt-module__container card p-1 m-0 mw-100">
+
+            <!-- Module Header -->
+            <div class="dt-module__header card-header pb-1  px-lg-4 px-3 ">
+                <div class="dropdown">
+                    <input type="hidden" id="pageUbicacion" value="1">
+                    <select id="sizePageUbicacion" class="form-control form-control-sm select2-single">
+                        <option value="10">10</option>
+                        <option value="15">15</option>
+                        <option value="20">20</option>
+                    </select>
+                </div>
+
+                <!-- Title -->
+                <div class="mx-auto text-center text-truncate">
+                    <h3 class="dt-module__title text-truncate" id="titleManagerUbicacion">Productos en Almacén</h3>
+
+                </div>
+                <!-- Title -->
+                <!-- Search Box -->
+                <form id="FrmUbicacion" class="search-box ml-2 max-w-250 right-side-icon  form-group">
+
+                    <input id="txtFilterUbicacion" class="form-control form-control-sm " placeholder="Search in app..."
+                        data-toggle="tooltip" data-placement="left" data-original-title="Buscar" type="search" />
+                    <button type="submit" class="search-icon">
+                        <i class="icon icon-search icon-lg"></i></button>
+                </form>
+                <!-- /search box -->
+            </div>
+            <!-- /module header -->
+
+            <!-- Module Header -->
+            <div class="form-row mt-2">
+                <!-- Cliente-->
+                <div class="col-xl-4 form-group">
+                    <label for="txtClienteUbicacionProducto" class="">Cliente</label>
+                    <div class="input-group">
+                        <input id="txtClienteUbicacionProducto" type="text" class="form-control form-control-sm"
+                            placeholder="Seleccionar Cliente -->" disabled>
+                        <div class="input-group-append">
+                            <button id="btnSeleccionarCliente" class="btn btn-sm btn-outline-primary" type="button"><i
+                                    class="icon icon-open-new-tab icon-sm">
+                                </i>
+                            </button>
+                            <button class="btn btn-dark btn-sm " type="button" id="btnEliminarCliente"
+                                data-toggle="tooltip" title="" data-original-title="Eliminar Cliente">
+                                <i class="icon icon-trash"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- PRODUCTO-->
+                <div class="col-xl-4 form-group">
+                    <label for="txtProducto" class="">Producto</label>
+                    <div class="input-group">
+                        <input id="txtProducto" type="text" class="form-control form-control-sm"
+                            placeholder="Seleccionar Producto -->" disabled>
+                        <div class="input-group-append">
+                            <button id="btnSeleccionarProducto" class="btn btn-sm btn-outline-primary" type="button"><i
+                                    class="icon icon-open-new-tab icon-sm">
+                                </i>
+                            </button>
+                            <button class="btn btn-dark btn-sm" type="button" id="btnEliminarProducto"
+                                data-toggle="tooltip" title="" data-original-title="Eliminar Producto">
+                                <i class="icon icon-trash"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- ALMACÉN-->
+                <div class="col-xl-4 form-group">
+                    <label for="txtAlmacenUbicacionProducto" class="">Almacén</label>
+                    <div class="input-group">
+                        <input id="txtAlmacenUbicacionProducto" type="text" class="form-control form-control-sm"
+                            placeholder="Seleccionar Almacen -->" disabled>
+                        <div class="input-group-append">
+                            <button id="btnSeleccionarAlmacen" class="btn btn-sm btn-outline-primary" type="button"><i
+                                    class="icon icon-open-new-tab icon-sm">
+                                </i>
+                            </button>
+                            <button class="btn btn-dark btn-sm " type="button" id="btnEliminarAlmacen"
+                                data-toggle="tooltip" title="" data-original-title="Eliminar Almacèn">
+                                <i class="icon icon-trash"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /module header -->
+
+            <!-- Module Content -->
+            <div class="dt-module__content ps-custom-scrollbar">
+
+                <!-- Module Content Inner -->
+                <div class="dt-module__content-inner p-0">
+
+                    <!-- List -->
+                    <div class="dt-widget dt-widget-hover-bg text-light-gray">
+                        <div class="dt-widget__item border-success bg-primary text-white mb-0 pb-2">
+
+                            <!-- widget info -->
+                            <div class="dt-widget__info  ">
+                                <p class="mb-0  ">
+                                    CLIENTE
+                                </p>
+                            </div>
+                            <!-- /widget info -->
+                            <!-- widget info -->
+                            <div class=" dt-widget__info ">
+                                <p class=" mb-0 ">
+                                    PRODUCTO
+                                </p>
+                            </div>
+                            <!-- /widget info -->
+                            <!-- Widget Info -->
+                            <div class=" dt-widget__info ">
+                                <p class=" mb-0 ">
+                                    UBICACIÓN
+                                </p>
+                            </div>
+                            <!-- /widget info -->
+
+                            <!-- widget info -->
+                            <div class=" dt-widget__info ">
+                                <p class="mb-0  ">
+                                    ALMACÉN
+                                </p>
+                            </div>
+                            <!-- /widget info -->
+
+                            <!-- Widget Extra -->
+                            <div class="dt-widget__extra">
+                                KARDEX
+                            </div>
+                        </div>
+                        <!-- List -->
+                        <div id="tbodyUbicacion">
+                        </div>
+                        <!-- /list -->
+
+                    </div>
+                    <!-- /list -->
+
+                    <!-- pagination CAJA -->
+                    <nav class="pt-2 border-top" aria-label="Page navigation example">
+                        <ul id="paginationUbicacion" class="pagination pagination-sm justify-content-center">
+                        </ul>
+                    </nav>
+                    <!-- /pagination CAJA -->
+                </div>
+                <!-- /module content inner -->
+
+            </div>
+            <!-- /module content -->
+
+        </div>
+        <!-- /module container -->
+
+
+
+    </div>
+    <!-- /module -->
+</div>

@@ -1,0 +1,68 @@
+<!-- Card LISTADO DE GASTO-->
+
+<div class="col-xl-12 p-sm-0">
+    <!-- div class="dt-module"-->
+    <!-- Module Container -->
+    <div class="dt-module__container card p-1 m-0 mw-100">
+
+        <!-- Module Header -->
+        <div class="dt-module__header card-header pb-1  px-lg-4 px-3 ">
+            <div class="dropdown">
+                <input type="hidden" id="pageGasto" value="1">
+                <select id="sizePageGasto" class="form-control form-control-sm select2-single">
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                </select>
+            </div>
+
+            <!-- Title -->
+            <div class="mx-auto text-center text-truncate">
+                <h3 class="dt-module__title text-truncate" id="titleManagerGasto">Gastos</h3>
+
+            </div>
+            <!-- Title -->
+            <!-- Search Box -->
+            <form id="FrmGasto" class="dt-module__filter search-box ml-2 max-w-250 right-side-icon">
+                <input id="txtFilterGasto" class="form-control form-control-sm " placeholder="Search in app..."
+                    data-toggle="tooltip" data-placement="left" data-original-title="Buscar" type="search" />
+                <button type="submit" class="search-icon">
+                    <i class="icon icon-search icon-lg"></i></button>
+            </form>
+            <!-- /search box -->
+            <button id="btnAbrirNewGasto" type="button" class="btn btn-sm btn-primary">
+                <i class="icon icon-circle-add-o icon-1x"></i></button>
+
+
+        </div>
+        <!-- /module header -->
+
+        <!-- Module Content -->
+        <div class="dt-module__content ps-custom-scrollbar">
+
+            <!-- Module Content Inner -->
+            <div class="dt-module__content-inner p-0">
+
+                <!-- List -->
+                <div id="tbodyGasto" class="dt-widget dt-widget-hover-bg text-light-gray">
+                </div>
+                <!-- /list -->
+
+                <!-- pagination CAJA -->
+                <nav class="pt-2 border-top" aria-label="Page navigation example">
+                    <ul id="paginationGasto" class="pagination pagination-sm justify-content-center">
+                    </ul>
+                </nav>
+                <!-- /pagination CAJA -->
+            </div>
+            <!-- /module content inner -->
+
+        </div>
+        <!-- /module content -->
+
+    </div>
+    <!-- /module container -->
+    <!--/div-->
+    <!-- /module -->
+
+</div>

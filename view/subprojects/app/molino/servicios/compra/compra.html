@@ -1,0 +1,224 @@
+<div id="listCompraHtml" class="col-xl-12">
+    <!-- Module Container -->
+    <div class="dt-module__container card p-1 m-0 mw-100">
+
+        <!-- Module Header -->
+        <div class="dt-module__header card-header pY-2  px-lg-4 px-3 border-0" style="min-height: 35px;">
+            <div class="dropdown">
+                <input type="hidden" id="pageCompra" value="1">
+                <select id="sizePageCompra" class="form-control form-control-sm select2-single">
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                </select>
+            </div>
+
+            <!-- Title -->
+            <div class="mx-auto text-center">
+                <h3 class="dt-module__title" id="titleManagerCompra">Compra</h3>
+
+            </div>
+
+            <button id="btnAbrirNewCompra" class="btn btn-sm bg-primary text-white" type="button" data-toggle="tooltip"
+                data-html="true" title="" data-original-title="<em>Agregar Nueva Compra</em>">
+                <i class="icon icon-circle-add-o icon-1x pulse-light"></i> <span>
+                    Nuevo</span>
+            </button>
+        </div>
+        <!-- /module header -->
+        <!-- Module Header -->
+        <div class="dt-module__header  py-1  px-lg-4 px-3 border-0 form-row m-0">
+
+            <div class="col-lg-4 col-sm-6 col-12">
+                <label for="txtFechaIFilterCompra" class="w-25 text-right">Desde</label>
+
+                <div class="input-group input-group-sm">
+                    <div class="input-group-prepend btn btn-outline-primary mr-1" data-target="#txtFechaIFilterCompra"
+                        data-toggle="datetimepicker">
+                        <i class="icon icon-calendar"></i>
+
+                    </div>
+                    <input type="text" id="txtFechaIFilterCompra" class="form-control form-control-sm"
+                        placeholder="DD/MM/AAAA" data-dtp="dtp_t9AHq">
+                    <div class="input-group-append">
+
+                        <button class="btn btn-dark btn-sm input-ii" type="button" id="btnEliminarFechaIFilterCompra"
+                            data-toggle="tooltip" title="" data-original-title="Eliminar Fecha">
+                            <i class="icon icon-trash"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 col-12">
+                <label for="txtFechaFFilterCompra" class="w-25 text-right">Hasta</label>
+                <div class="input-group input-group-sm">
+                    <div class="input-group-prepend btn btn-outline-primary mr-1" data-target="#txtFechaFFilterCompra"
+                        data-toggle="datetimepicker">
+                        <i class="icon icon-calendar"></i>
+
+                    </div>
+                    <input type="text" id="txtFechaFFilterCompra" class="form-control form-control-sm"
+                        placeholder="DD/MM/AAAA" data-dtp="dtp_HJPN4">
+                    <div class="input-group-append">
+
+                        <button class="btn btn-dark btn-sm input-ii" type="button" id="btnEliminarFechaFFilterCompra"
+                            data-toggle="tooltip" title="" data-original-title="Eliminar Fecha">
+                            <i class="icon icon-trash"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-12 col-12">
+                <form id="FrmCompra" class=" search-box right-side-icon mw-100">
+                    <label for="txtFilterCompra">Filtrar</label>
+                    <input id="txtFilterCompra" class="form-control form-control-sm" placeholder="Search in app..."
+                        data-toggle="tooltip" data-placement="top" data-original-title="Buscar" type="search" />
+                    <button type="submit" class="search-icon pt-5">
+                        <i class="icon icon-search icon-lg"></i></button>
+                </form>
+            </div>
+            <!-- Search Box -->
+
+            <!-- /search box -->
+
+        </div>
+        <!-- /module header -->
+        <!-- Module Content -->
+        <div class="dt-module__content ps-custom-scrollbar">
+
+            <!-- Module Content Inner -->
+            <div class="dt-module__content-inner p-0" style="min-width: 760px;">
+                <!-- Widget Item -->
+                <div class="dt-widget__item border-success bg-primary text-white mb-0 pb-2">
+                    <!-- Widget Info -->
+                    <div class="dt-widget__info">
+                        <p class="dt-widget__subtitle">
+                            FECHA
+                        </p>
+                    </div>
+                    <!-- /widget info -->
+                    <!-- Widget Info -->
+                    <div class="dt-widget__info">
+                        <p class="dt-widget__subtitle">
+                            CLIENTE
+                        </p>
+                    </div>
+                    <!-- /widget info -->
+                    <!-- Widget Info -->
+                    <div class="dt-widget__info">
+                        <p class="dt-widget__subtitle">
+                            ESTADO
+                        </p>
+                    </div>
+                    <!-- /widget info -->
+                    <!-- Widget Info -->
+                    <div class="dt-widget__info">
+                        <p class="dt-widget__subtitle">
+                            TOTAL
+                        </p>
+                    </div>
+                    <!-- /widget info -->
+                    <!-- Widget Info -->
+                    <div class="dt-widget__info">
+                        <p class="dt-widget__subtitle">
+                            DOCUMENTO
+                        </p>
+                    </div>
+                    <!-- /widget info -->
+
+                    <!-- Widget Info -->
+                    <div class="dt-widget__info">
+                        <p class="dt-widget__subtitle">
+                            USUARIO
+                        </p>
+                    </div>
+                    <!-- /widget info -->
+                    <!-- Widget Extra -->
+                    <div class="dt-widget__extra">
+                        <div class="dt-task" style="min-width: 35px;">
+                        </div>
+                    </div>
+                </div>
+                <!-- List -->
+                <div id="tbodyCompra" class="dt-widget dt-widget-hover-bg text-light-gray">
+                </div>
+                <!-- /list -->
+
+                <!-- pagination Compra -->
+                <nav class="pt-2 border-top" aria-label="Page navigation example">
+                    <ul id="paginationCompra" class="pagination pagination-sm justify-content-center">
+                    </ul>
+                </nav>
+                <!-- /pagination Compra -->
+            </div>
+            <!-- /module content inner -->
+
+        </div>
+        <!-- /module content -->
+
+    </div>
+    <!-- /module container -->
+</div>
+<!-- Modal -->
+<div id="modalPagoCompra" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+
+        <!-- Modal Content -->
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h3 class="modal-title w-100 text-center" id="model-5">Pago de Compra</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <!-- /modal header -->
+
+            <!-- Modal Body -->
+            <div class="modal-body">
+                <!-- Widget Info -->
+                <div class="col-12 form-group">
+                    <!-- Input Group -->
+                    <div class="input-group input-group-sm">
+
+                        <div class="input-group-prepend">
+                            <select class="form-control form-control-sm mr-xl-5" id="txtMetodoPagoCompra">
+                                <option value="1">Pago Efectivo</option>
+                                <option value="2">VISA</option>
+                            </select>
+                            <span class="input-group-text">S/.</span>
+                        </div>
+                        <input id="txtMontoPagadoCompra" type="number" class="form-control form-control-sm">
+                    </div>
+                    <!-- /input group -->
+
+                </div>
+
+
+
+                <!-- /widget info -->
+            </div>
+            <!-- /modal body -->
+
+            <!-- Modal Footer -->
+            <div class="modal-footer">
+                <!-- Form -->
+                <div class="col-lg-12 text-center">
+                    <form id="FrmPagoCompraModal">
+
+                        <button type="submit" class="btn btn-sm btn-success">
+                            <i class="icon icon-task-manager icon-1x "></i>
+                            <small class="f-12">Pagar</small></button>
+
+                    </form>
+                </div>
+
+                <!-- /form -->
+            </div>
+            <!-- /modal footer -->
+
+        </div>
+        <!-- modal content -->
+
+    </div>
+</div>
+<!-- /modal -->

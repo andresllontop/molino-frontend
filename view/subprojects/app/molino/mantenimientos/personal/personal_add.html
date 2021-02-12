@@ -1,0 +1,253 @@
+<div id="addPersonalHtml" class="modal fade">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content dt-card border border-w-3 border-dark-blue">
+            <!-- Card FORMULARIO-->
+            <!-- Card Header -->
+            <div class="modal-header dt-card__heading border-bottom-0">
+                <!-- Card Heading -->
+                <h3 class="dt-page__title text-center w-100" id="TituloModalPersonal">Agregar Personal</h3>
+                <!-- /card heading -->
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+
+
+            </div>
+
+            <!-- Form -->
+            <div class="dt-masonry__item">
+                <!-- Card Body -->
+                <div class="dt-card__body tabs-container p-2">
+
+                    <!-- Tab Navigation -->
+                    <ul class="nav nav-tabs " role="tablist">
+                        <li class="nav-item ">
+                            <a class="nav-link active" data-toggle="tab" href="#tab-pane-3" role="tab"
+                                aria-controls="tab-pane-3" aria-selected="false">Datos Personales
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" data-toggle="tab" href="#tab-pane-4" role="tab"
+                                aria-controls="tab-pane-4" aria-selected="false">Datos Laborales
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" data-toggle="tab" href="#tab-pane-5" role="tab"
+                                aria-controls="tab-pane-4" aria-selected="false">Datos de Acceso
+                            </a>
+                        </li>
+
+                    </ul>
+                    <!-- /tab navigation -->
+
+                    <!-- Tab Content -->
+                    <div class="tab-content">
+
+                        <!-- Tab Pane -->
+                        <div id="tab-pane-3" class="tab-pane active">
+
+                            <div class="form-row card-body">
+                                <div class="col-lg-4 col-sm-4 col-6 form-group">
+                                    <label for="txtTipoDocumentoPersonal">Tipo de Documento</label>
+                                    <select class="form-control form-control-sm" id="txtTipoDocumentoPersonal">
+                                        <option value="0">Seleccione...</option>
+                                        <option value="1">DNI</option>
+                                        <option value="2">CARNET DE EXTRANJERIA</option>
+                                        <option value="3">OTRO</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-4 col-sm-5 col-6 form-group ">
+                                    <label for="txtDocumentoPersonal">Documento</label>
+                                    <input placeholder="Documento del Personal" id="txtDocumentoPersonal"
+                                        class="form-control form-control-sm" type="text" maxlength="8">
+                                </div>
+                                <div class="col-lg-4 col-sm-3 col-4 form-group">
+                                    <label for="txtSexoPersonal">Sexo</label>
+                                    <select class="form-control form-control-sm" id="txtSexoPersonal">
+                                        <option value="0">Seleccione...</option>
+                                        <option value="1">MASCULINO</option>
+                                        <option value="2">FEMENINO</option>
+                                        <option value="3">OTRO</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-4 col-sm-6 col-8 form-group ">
+                                    <label for="txtNombrePersonal">Nombres</label>
+                                    <input placeholder="Nombre del Personal" id="txtNombrePersonal"
+                                        class="form-control form-control-sm" maxlength="50" type="text">
+                                </div>
+                                <div class="col-lg-5 col-sm-6 col-12 form-group ">
+                                    <label for="txtApellidoPersonal">Apellidos</label>
+                                    <input placeholder="Apellidos del Personal" id="txtApellidoPersonal"
+                                        class="form-control form-control-sm" type="text" maxlength="25">
+                                </div>
+
+                                <div class="col-lg-3 col-sm-4 col-4 form-group ">
+                                    <label for="txtTelefonoPersonal">Celular</label>
+                                    <input placeholder="Número de celular" id="txtTelefonoPersonal"
+                                        class="form-control form-control-sm" type="text" maxlength="11">
+                                </div>
+                                <div class="col-lg-6 col-sm-8 col-8 form-group ">
+                                    <label for="txtEmailPersonal">Email</label>
+                                    <input placeholder="Email del Personal" id="txtEmailPersonal"
+                                        class="form-control form-control-sm" maxlength="50" type="email">
+                                </div>
+
+                                <div class="col-lg-6 col-sm-12 col-12 form-group ">
+                                    <label for="txtDireccionPersonal">Dirección</label>
+                                    <input placeholder="Dirección del Personal" id="txtDireccionPersonal"
+                                        class="form-control form-control-sm" type="text" maxlength="50">
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <!-- /tab pane-->
+                        <!-- Tab Pane -->
+                        <div id="tab-pane-4" class="tab-pane">
+
+                            <div class="form-row card-body">
+
+                                <!-- AREA -->
+                                <div class="col-lg-5 col-sm-6 col-6 form-group">
+                                    <label for="txtAreaPersonal">Área</label>
+                                    <div class="input-group">
+                                        <input id="txtAreaPersonal" type="text" class="form-control form-control-sm"
+                                            placeholder="Seleccionar Área -->" disabled>
+                                        <div class="input-group-append">
+                                            <button id="btnSeleccionarArea" class="btn btn-sm btn-outline-primary"
+                                                type="button"><i class="icon icon-open-new-tab icon-sm">
+                                                </i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- CARGO -->
+                                <div class="col-lg-5 col-sm-6 col-6 form-group">
+                                    <label for="txtCargoPersonal">Cargo</label>
+                                    <div class="input-group">
+                                        <input id="txtCargoPersonal" type="text" class="form-control form-control-sm"
+                                            placeholder="Seleccionar Cargo -->" disabled>
+                                        <div class="input-group-append">
+                                            <button id="btnSeleccionarCargo" class="btn btn-sm btn-outline-primary"
+                                                type="button"><i class="icon icon-open-new-tab icon-sm">
+                                                </i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-2 col-sm-12 form-group text-center">
+                                    <label for="txtEstadoPersonal" class="w-100">Estado</label>
+                                    <label class="switch">
+                                        <input id="txtEstadoPersonal" class="check-impuesto" type="checkbox" checked=""
+                                            autocomplete="off">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- /tab pane-->
+                        <!-- Tab Pane -->
+                        <div id="tab-pane-5" class="tab-pane">
+
+                            <form id="FrmUsuarioModal">
+                                <div class="form-row card-body">
+                                    <div class="col-lg-4 col-sm-6 col-6 form-group ">
+                                        <label for="txtNombreUsuario">Nombre de Usuario</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="btn btn-sm btn-primary">
+                                                    <i class="icon icon-user icon-fw icon-sm"></i>
+                                                </span>
+                                            </div>
+                                            <input id="txtNombreUsuario" type="text"
+                                                class="form-control form-control-sm" placeholder="Username"
+                                                aria-label="Username">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-sm-6 col-6 form-group ">
+                                        <label for="txtLoginUsuario">Login</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="btn btn-sm btn-primary">
+                                                    <i class="icon icon-wall icon-fw icon-sm"></i>
+                                                </span>
+                                            </div>
+                                            <input id="txtLoginUsuario" type="text" class="form-control form-control-sm"
+                                                placeholder="Login" aria-label="Login">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-sm-6 col-6 form-group ">
+                                        <label for="txtPassUsuario">Contraseña</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="btn btn-sm btn-primary">
+                                                    <i class="icon icon-forgot-pass icon-fw icon-sm"></i>
+                                                </span>
+                                            </div>
+                                            <input id="txtPassUsuario" type="text" class="form-control form-control-sm"
+                                                placeholder="Username" aria-label="Username">
+                                            <div class="input-group-append">
+                                                <button type="button" class="btn btn-sm btn-primary"
+                                                    id="btnMostrarPass">
+                                                    <i id="icono_mostrar_pass" class="icon icon-eye icon-sm"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8 col-sm-6 form-group">
+                                        <label for="txtTipoPerfilUsuario">TIPO PERFIL</label>
+                                        <select class="form-control form-control-sm" id="txtTipoPerfilUsuario">
+                                            <option selected value="-1">Seleccione...</option>
+                                            <option style="display:none" value="0">SISTEMAS</option>
+                                            <option value="1">ADMINISTRADOR</option>
+                                            <option value="2">SECRETARIO(A)</option>
+                                            <option value="100">INVITADO(solo el inicio)</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-2 col-sm-12 form-group text-center">
+                                        <label for="txtEstadoUsuario" class="w-100">Estado</label>
+                                        <label class="switch">
+                                            <input id="txtEstadoUsuario" class="check-estado-usuario" type="checkbox"
+                                                checked="">
+                                            <span class="slider round"></span>
+                                        </label>
+                                    </div>
+                                    <div class="form-group col-12 text-center">
+                                        <button type="submit" id="btnGuardarUsuario"
+                                            class="btn btn-primary btn-sm">ACTUALIZAR</button>
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div>
+                        <!-- /tab pane-->
+
+
+                    </div>
+                    <!-- /tab content -->
+
+                </div>
+                <!-- /card body -->
+
+            </div>
+            <!-- Form -->
+            <form id="FrmPersonalModal" class="mb-4">
+                <div class="col-lg-12 text-center">
+                    <button type="submit" class="btn btn-sm btn-outline-success">
+                        <i class="icon icon-task-manager icon-1x "></i>
+                        <small class="text-dark f-12">Registrar</small></button>
+                    <button type="reset" class="btn btn-sm ">
+                        <i class="icon icon-1x text-danger" data-icon="9"></i>
+                        <small class="text-dark f-12">Limpiar</small> </button>
+                </div>
+
+            </form>
+            <!-- /form -->
+
+
+
+        </div>
+    </div>
+</div>

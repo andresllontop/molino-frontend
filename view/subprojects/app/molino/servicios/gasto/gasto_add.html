@@ -1,0 +1,95 @@
+<div id="addGastoHtml" class="modal fade" style="z-index: 1049;overflow-y: scroll;">
+    <div class=" modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content dt-card border border-w-3 border-dark-blue">
+            <!-- Card FORMULARIO-->
+            <!-- Card Header -->
+            <div class="modal-header dt-card__heading border-bottom-0">
+                <!-- Card Heading -->
+                <h3 class="dt-page__title text-center w-100" id="TituloModalGasto">Nuevo Gasto</h3>
+                <!-- /card heading -->
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+
+
+            </div>
+
+            <!-- Form -->
+            <!-- Form -->
+            <form id="FrmGastoModal" class="modal-body">
+                <div class="form-row">
+                    <div class="col-sm-6 col-12 form-group">
+                        <label for="txtFechaGasto" class="form">Fecha</label>
+                        <div class="input-group date" id="FechaGasto" data-target-input="nearest">
+                            <div class="input-group-prepend" data-target="#FechaGasto" data-toggle="datetimepicker">
+                                <div class="input-group-text"><i class="icon icon-calendar"></i></div>
+                            </div>
+                            <input id="txtFechaGasto" type="text" class="form-control datetimepicker-input"
+                                data-target="#FechaGasto">
+                            <div class="input-group-append">
+
+                                <button class="btn btn-dark btn-sm input-ii" type="button" id="btnEliminarFechaGasto"
+                                    data-toggle="tooltip" title="" data-original-title="Eliminar Fecha">
+                                    <i class="icon icon-trash"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Unidad Ingreso -->
+                    <div class="col-sm-6 col-12 form-group ">
+                        <label for="txtCategoriaGasto">Categoria</label>
+                        <div class="input-group">
+                            <input id="txtCategoriaGasto" type="text" class="form-control form-control-sm"
+                                placeholder="Seleccionar Categoria-->" disabled>
+                            <div class="input-group-append">
+                                <button id="btnSeleccionarCategoria" class="btn btn-sm btn-outline-primary"
+                                    type="button"><i class="icon icon-open-new-tab icon-sm">
+                                    </i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-8 col-sm-8 col-12 form-group">
+                        <label for="txtDescripcionGasto" class="form">Descipcion</label>
+                        <input placeholder="Nombre del Gasto" id="txtDescripcionGasto"
+                            class="form-control form-control-sm" maxlength="200" type="text">
+                    </div>
+
+                    <div class="col-lg-4 col-sm-4 col-12 form-group">
+                        <label for="txtMontoGasto" class="form">Monto</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text py-1">S/.</span>
+                            </div>
+                            <input placeholder="Precio por Servicio" id="txtMontoGasto"
+                                class="form-control form-control-sm" type="text">
+
+
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-sm-6 col-12 form-group">
+                        <label for="txtDetalleGasto" class="form">Detalle A dicional</label>
+                        <textarea class="form-control form-control-sm" rows="3" placeholder="Detalle"
+                            id="txtDetalleGasto"></textarea>
+                    </div>
+                    <div class="col-lg-12 text-center">
+                        <button type="submit" class="btn btn-sm btn-outline-light">
+                            <i class="icon icon-task-manager icon-1x text-success"></i>
+                            <small class="text-dark f-12">Registrar</small></button>
+                        <button type="reset" class="btn btn-sm ">
+                            <i class="icon icon-1x text-danger" data-icon="9"></i>
+                            <small class="text-dark f-12">Limpiar</small> </button>
+                    </div>
+
+                </div>
+
+
+            </form>
+            <!-- /form -->
+            <!-- /form -->
+
+
+        </div>
+    </div>
+</div>
